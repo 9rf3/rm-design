@@ -1,0 +1,14 @@
+[      83ms] [WARNING] Failed to decode downloaded font: http://localhost:8765/vendor/phosphor/PhosphorFill.woff2 @ http://localhost:8765/:0
+[      84ms] [WARNING] OTS parsing error: invalid sfntVersion: 1131378028 @ http://localhost:8765/:0
+[     370ms] [WARNING] Failed to decode downloaded font: http://localhost:8765/vendor/phosphor/PhosphorFill.woff2 @ http://localhost:8765/:0
+[     370ms] [WARNING] OTS parsing error: invalid sfntVersion: 1131378028 @ http://localhost:8765/:0
+[   48123ms] [WARNING] Failed to decode downloaded font: http://localhost:8765/vendor/phosphor/PhosphorFill.woff2 @ http://localhost:8765/:0
+[   48123ms] [WARNING] OTS parsing error: invalid sfntVersion: 1131378028 @ http://localhost:8765/:0
+[   49023ms] [WARNING] Failed to decode downloaded font: http://localhost:8765/vendor/phosphor/PhosphorFill.woff2 @ http://localhost:8765/:0
+[   49023ms] [WARNING] OTS parsing error: invalid sfntVersion: 1131378028 @ http://localhost:8765/:0
+[   60990ms] [WARNING] Failed to decode downloaded font: http://localhost:8765/vendor/phosphor/PhosphorFill.woff2 @ http://localhost:8765/:0
+[   60990ms] [WARNING] OTS parsing error: invalid sfntVersion: 1131378028 @ http://localhost:8765/:0
+[  108610ms] [WARNING] Failed to decode downloaded font: http://localhost:8765/vendor/phosphor/PhosphorFill.woff2 @ http://localhost:8765/:0
+[  108610ms] [WARNING] OTS parsing error: invalid sfntVersion: 1131378028 @ http://localhost:8765/:0
+[  109752ms] [WARNING] Failed to decode downloaded font: http://localhost:8765/vendor/phosphor/PhosphorFill.woff2 @ http://localhost:8765/:0
+[  109752ms] [WARNING] OTS parsing error: invalid sfntVersion: 1131378028 @ http://localhost:8765/:0

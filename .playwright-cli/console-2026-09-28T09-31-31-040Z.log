@@ -1,0 +1,16 @@
+[   36137ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_RESET @ http://localhost:8765/img/hero-mock.png:0
+[   36137ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_RESET @ http://localhost:8765/img/dest-samarkand.jpg:0
+[   36138ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_RESET @ http://localhost:8765/img/dest-bukhara.jpg:0
+[   36138ms] [ERROR] Failed to load resource: net::ERR_SOCKET_NOT_CONNECTED @ http://localhost:8765/img/qr.png:0
+[   36138ms] [ERROR] Failed to load resource: net::ERR_SOCKET_NOT_CONNECTED @ http://localhost:8765/img/icon-apple.svg:0
+[   36138ms] [ERROR] Failed to load resource: net::ERR_SOCKET_NOT_CONNECTED @ http://localhost:8765/img/icon-googleplay.svg:0
+[   36138ms] [ERROR] Failed to load resource: net::ERR_SOCKET_NOT_CONNECTED @ http://localhost:8765/img/icon-telegram.svg:0
+[   36138ms] [ERROR] Failed to load resource: net::ERR_SOCKET_NOT_CONNECTED @ http://localhost:8765/img/icon-instagram.svg:0
+[   36138ms] [ERROR] Failed to load resource: net::ERR_SOCKET_NOT_CONNECTED @ http://localhost:8765/img/icon-youtube.svg:0
+[   36141ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_RESET @ http://localhost:8765/app.js:0
+[   36204ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_RESET @ http://localhost:8765/img/dest-fergana.jpg:0
+[   36204ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_RESET @ http://localhost:8765/img/transport-train.jpg:0
+[   36204ms] [ERROR] Failed to load resource: net::ERR_SOCKET_NOT_CONNECTED @ http://localhost:8765/img/transport-bus.jpg:0
+[   36211ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_RESET @ http://localhost:8765/img/transport-plane.jpg:0
+[   36240ms] [WARNING] Failed to decode downloaded font: http://localhost:8765/vendor/phosphor/PhosphorFill.woff2 @ http://localhost:8765/:0
+[   36240ms] [WARNING] OTS parsing error: invalid sfntVersion: 1131378028 @ http://localhost:8765/:0

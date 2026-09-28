@@ -1,0 +1,2 @@
+[      14ms] [WARNING] Failed to decode downloaded font: http://localhost:8765/vendor/phosphor/PhosphorFill.woff2 @ http://localhost:8765/app.js:15
+[      14ms] [WARNING] OTS parsing error: invalid sfntVersion: 1131378028 @ http://localhost:8765/app.js:15

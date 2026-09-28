@@ -1,0 +1,68 @@
+- generic [active] [ref=f2e1]:
+  - banner [ref=f2e2]:
+    - generic [ref=f2e3]:
+      - link "BTICKET" [ref=f2e4] [cursor=pointer]:
+        - /url: "#"
+      - navigation "Главное меню" [ref=f2e5]:
+        - list [ref=f2e21]:
+          - listitem [ref=f2e22]:
+            - link "Главная" [ref=f2e23] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=f2e30]:
+            - link "Билеты" [ref=f2e31] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=f2e38]:
+            - link "Услуги" [ref=f2e39] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=f2e49]:
+            - link "Поддержка" [ref=f2e50] [cursor=pointer]:
+              - /url: "#"
+      - generic [ref=f2e58]:
+        - link "Войти" [ref=f2e59] [cursor=pointer]:
+          - /url: "#"
+        - link "Регистрация" [ref=f2e60] [cursor=pointer]:
+          - /url: "#"
+  - main [ref=f2e65]:
+    - generic [ref=f2e228]:
+      - generic [ref=f2e229]:
+        - generic [ref=f2e230]: Путешествуйте по всему Узбекистану
+        - heading "Билеты на поезд, автобус и самолёт" [level=1] [ref=f2e234]: Билеты на поезд,автобус и самолёт
+        - paragraph [ref=f2e235]: Быстро. Удобно. Надёжно.
+        - generic [ref=f2e236]:
+          - tablist [ref=f2e237]:
+            - tab "Поезд" [selected] [ref=f2e238] [cursor=pointer]
+            - tab "Автобус" [ref=f2e245] [cursor=pointer]
+            - tab "Самолёт" [ref=f2e252] [cursor=pointer]
+          - generic [ref=f2e256]:
+            - generic [ref=f2e262]:
+              - generic [ref=f2e263]: Откуда
+              - textbox "Откуда" [ref=f2e264]: Ташкент
+            - button "Поменять местами" [ref=f2e265] [cursor=pointer]
+            - generic [ref=f2e273]:
+              - generic [ref=f2e274]: Куда
+              - textbox "Куда" [ref=f2e275]: Самарканд
+            - generic [ref=f2e276] [cursor=pointer]:
+              - generic [ref=f2e281]:
+                - generic [ref=f2e282]: Дата поездки
+                - generic [ref=f2e283]: 12 окт. 2026
+              - textbox "Дата поездки" [ref=f2e284]: 2026-10-12
+            - button "Найти билеты" [ref=f2e285] [cursor=pointer]
+      - list [ref=f2e289]:
+        - listitem [ref=f2e290]:
+          - generic [ref=f2e294]:
+            - strong [ref=f2e295]: Быстрый поиск
+            - emphasis [ref=f2e296]: Билеты за несколько секунд
+        - listitem [ref=f2e297]:
+          - generic [ref=f2e301]:
+            - strong [ref=f2e302]: Безопасная оплата
+            - emphasis [ref=f2e303]: Надёжные платежи
+        - listitem [ref=f2e304]:
+          - generic [ref=f2e308]:
+            - strong [ref=f2e309]: Электронные билеты
+            - emphasis [ref=f2e310]: Без очередей
+        - listitem [ref=f2e311]:
+          - generic [ref=f2e316]:
+            - strong [ref=f2e317]: Поддержка 24/7
+            - emphasis [ref=f2e318]: Мы всегда на связи
+      - button "Прокрутить вниз" [ref=f2e319] [cursor=pointer]
+    - status

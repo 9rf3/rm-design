@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ticketsale.uz — Билеты на поезд, автобус и самолёт</title>
+    <meta
+      name="description"
+      content="ticketsale.uz — быстрое и удобное покупка билетов на поезд, автобус и самолёт по всему Узбекистану."
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%231E6FF1'/%3E%3Cpath d='M11 8h3.4l2.1 6 2.1-6H22l-3.6 9.4c-.9 2.3-2.7 3.6-5.4 3.6v-2.6c1.5 0 2.4-.6 2.9-1.9L11 8Z' fill='white'/%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="fonts.css" />
+    <link rel="stylesheet" href="vendor/phosphor/regular.css" />
+    <link rel="stylesheet" href="vendor/phosphor/fill.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- ============================================ Header -->
+    <header class="site-header" id="siteHeader">
+      <div class="container header-inner">
+        <a class="logo" href="#" aria-label="ticketsale.uz — на главную">ticketsale.uz</a>
+
+        <nav class="train-nav" aria-label="Главное меню">
+          <img class="train-engine" src="img/train-head.png" alt="" width="688" height="286" />
+          <a class="train-link is-active" href="#" aria-current="page">
+            <span><i class="ph ph-house" aria-hidden="true"></i>Главная</span>
+          </a>
+          <a class="train-link" href="#directions">
+            <span><i class="ph ph-ticket" aria-hidden="true"></i>Билеты</span>
+          </a>
+          <a class="train-link" href="#transport">
+            <span><i class="ph ph-bus" aria-hidden="true"></i>Услуги</span>
+          </a>
+          <a class="train-link" href="#footer">
+            <span><i class="ph ph-headset" aria-hidden="true"></i>Поддержка</span>
+          </a>
+        </nav>
+
+        <div class="header-actions">
+          <button class="icon-btn" id="headerSearch" aria-label="Поиск билетов">
+            <i class="ph ph-magnifying-glass" aria-hidden="true"></i>
+          </button>
+          <a class="link-btn" href="#">Войти</a>
+          <a class="btn btn--primary btn--reg" href="#">
+            <i class="ph ph-user-plus" aria-hidden="true"></i>Регистрация
+          </a>
+          <button class="burger" id="burger" aria-label="Меню" aria-expanded="false" aria-controls="drawer">
+            <i class="ph ph-list" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="drawer" id="drawer">
+        <a href="#"><i class="ph ph-house" aria-hidden="true"></i>Главная</a>
+        <a href="#directions"><i class="ph ph-ticket" aria-hidden="true"></i>Билеты</a>
+        <a href="#transport"><i class="ph ph-bus" aria-hidden="true"></i>Услуги</a>
+        <a href="#footer"><i class="ph ph-headset" aria-hidden="true"></i>Поддержка</a>
+        <div class="drawer-actions">
+          <a class="btn btn--ghost" href="#">Войти</a>
+          <a class="btn btn--primary" href="#">Регистрация</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- ========================================== Hero -->
+      <section class="hero">
+        <div class="container">
+          <div class="hero-grid">
+            <div class="hero-copy">
+              <span class="eyebrow">
+                <i class="ph ph-star" aria-hidden="true"></i>
+                Путешествуйте по всему Узбекистану
+              </span>
+
+              <h1>
+                Билеты на поезд,
+                <span class="accent">автобус и самолёт</span>
+              </h1>
+
+              <p class="hero-sub">Быстро. Удобно. Надёжно.</p>
+            </div>
+
+            <div class="hero-media" aria-hidden="true">
+              <img src="img/hero-mock.png" alt="" />
+            </div>
+          </div>
+
+          <!-- Search card -->
+          <form class="search-card" id="searchForm" novalidate>
+            <div class="search-tabs" role="tablist" aria-label="Вид транспорта">
+              <button class="search-tab is-active" type="button" role="tab" aria-selected="true" data-mode="train">
+                <i class="ph ph-train" aria-hidden="true"></i>Поезд
+              </button>
+              <button class="search-tab" type="button" role="tab" aria-selected="false" data-mode="bus">
+                <i class="ph ph-bus" aria-hidden="true"></i>Автобус
+              </button>
+              <button class="search-tab" type="button" role="tab" aria-selected="false" data-mode="plane">
+                <i class="ph ph-airplane" aria-hidden="true"></i>Самолёт
+              </button>
+            </div>
+
+            <div class="search-fields">
+              <label class="field field--from">
+                <i class="ph ph-map-pin" aria-hidden="true"></i>
+                <span class="field__body">
+                  <span class="field__label">Откуда</span>
+                  <input type="text" id="fromCity" value="Ташкент" aria-label="Откуда" />
+                </span>
+              </label>
+
+              <button class="swap-btn" type="button" id="swapBtn" aria-label="Поменять местами">
+                <i class="ph ph-arrows-left-right" aria-hidden="true"></i>
+              </button>
+
+              <label class="field field--to">
+                <i class="ph ph-map-pin" aria-hidden="true"></i>
+                <span class="field__body">
+                  <span class="field__label">Куда</span>
+                  <input type="text" id="toCity" value="Самарканд" aria-label="Куда" />
+                </span>
+              </label>
+
+              <div class="field field--date" id="dateField">
+                <i class="ph ph-calendar-blank" aria-hidden="true"></i>
+                <span class="field__body">
+                  <span class="field__label">Дата поездки</span>
+                  <span class="field__value" id="dateValue">12 окт. 2026</span>
+                </span>
+                <input type="date" id="dateInput" value="2026-10-12" aria-label="Дата поездки" />
+              </div>
+
+              <div class="field field--pass" id="passField" tabindex="0" role="button" aria-expanded="false" aria-haspopup="dialog">
+                <i class="ph ph-users" aria-hidden="true"></i>
+                <span class="field__body">
+                  <span class="field__label">Пассажиры</span>
+                  <span class="field__value" id="passValue">2 человека</span>
+                </span>
+                <i class="ph ph-caret-down" aria-hidden="true"></i>
+
+                <div class="popover" id="passPopover" role="dialog" aria-label="Количество пассажиров">
+                  <div class="popover__row">
+                    <div>
+                      <div class="popover__title">Пассажиры</div>
+                      <div class="popover__hint">От 1 до 9 человек</div>
+                    </div>
+                    <div class="stepper">
+                      <button type="button" id="passMinus" aria-label="Меньше пассажиров">
+                        <i class="ph ph-minus" aria-hidden="true"></i>
+                      </button>
+                      <span class="stepper__value" id="passCount">2</span>
+                      <button type="button" id="passPlus" aria-label="Больше пассажиров">
+                        <i class="ph ph-plus" aria-hidden="true"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <button class="popover__done" type="button" id="passDone">Готово</button>
+                </div>
+              </div>
+
+              <div class="field field--price">
+                <div class="price-head">
+                  <i class="ph ph-money" aria-hidden="true"></i>
+                  Цена (UZS)
+                </div>
+                <div class="range" id="priceRange">
+                  <div class="range__track"><div class="range__fill" id="rangeFill"></div></div>
+                  <input type="range" id="priceMin" min="100000" max="1500000" step="10000" value="420000" aria-label="Минимальная цена" />
+                  <input type="range" id="priceMax" min="100000" max="1500000" step="10000" value="1150000" aria-label="Максимальная цена" />
+                </div>
+                <div class="price-scale">
+                  <span id="priceMinLabel">100 000</span>
+                  <span id="priceMaxLabel">1 500 000</span>
+                </div>
+              </div>
+
+              <button class="btn btn--primary search-submit" type="submit" id="searchSubmit">
+                <i class="ph ph-magnifying-glass" aria-hidden="true"></i>
+                <span>Найти билеты</span>
+              </button>
+            </div>
+          </form>
+
+          <!-- USP strip -->
+          <ul class="usp" data-reveal>
+            <li class="usp-item">
+              <span class="usp-item__icon"><i class="ph ph-fill ph-fill-lightning" aria-hidden="true"></i></span>
+              <div>
+                <div class="usp-item__title">Быстрый поиск</div>
+                <div class="usp-item__text">Билеты за несколько секунд</div>
+              </div>
+            </li>
+            <li class="usp-item">
+              <span class="usp-item__icon"><i class="ph ph-fill ph-fill-shield-check" aria-hidden="true"></i></span>
+              <div>
+                <div class="usp-item__title">Безопасная оплата</div>
+                <div class="usp-item__text">Надёжные платежи</div>
+              </div>
+            </li>
+            <li class="usp-item">
+              <span class="usp-item__icon"><i class="ph ph-fill ph-fill-ticket" aria-hidden="true"></i></span>
+              <div>
+                <div class="usp-item__title">Электронные билеты</div>
+                <div class="usp-item__text">Без очередей</div>
+              </div>
+            </li>
+            <li class="usp-item">
+              <span class="usp-item__icon"><i class="ph ph-fill ph-fill-headset" aria-hidden="true"></i></span>
+              <div>
+                <div class="usp-item__title">Поддержка 24/7</div>
+                <div class="usp-item__text">Мы всегда на связи</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ========================================== Popular directions -->
+      <section class="section" id="directions">
+        <div class="container">
+          <div class="section-head" data-reveal>
+            <h2>Популярные направления</h2>
+            <a class="section-link" href="#">
+              Смотреть все <i class="ph ph-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+
+          <div class="dest-grid">
+            <a class="dest-card" href="#" data-reveal style="--reveal-delay: 0s">
+              <div class="dest-card__media">
+                <img src="img/dest-samarkand.jpg" alt="Самарканд, площадь Регистан" loading="lazy" />
+              </div>
+              <div class="dest-card__body">
+                <div class="dest-card__route">
+                  Ташкент <i class="ph ph-arrow-right" aria-hidden="true"></i> Самарканд
+                </div>
+                <div class="dest-card__bottom">
+                  <div class="dest-card__meta">
+                  <div class="dest-card__time">
+                  <i class="ph ph-clock" aria-hidden="true"></i> 2 ч 10 мин
+                </div>
+                  <div class="dest-card__price"><span>от</span>120 000 UZS</div>
+                  </div>
+                  <span class="circle-btn"><i class="ph ph-arrow-right" aria-hidden="true"></i></span>
+                </div>
+              </div>
+            </a>
+
+            <a class="dest-card" href="#" data-reveal style="--reveal-delay: 0.08s">
+              <div class="dest-card__media">
+                <img src="img/dest-bukhara.jpg" alt="Бухара, минарет Калон" loading="lazy" />
+              </div>
+              <div class="dest-card__body">
+                <div class="dest-card__route">
+                  Ташкент <i class="ph ph-arrow-right" aria-hidden="true"></i> Бухара
+                </div>
+                <div class="dest-card__bottom">
+                  <div class="dest-card__meta">
+                  <div class="dest-card__time">
+                  <i class="ph ph-clock" aria-hidden="true"></i> 4 ч 30 мин
+                </div>
+                  <div class="dest-card__price"><span>от</span>140 000 UZS</div>
+                  </div>
+                  <span class="circle-btn"><i class="ph ph-arrow-right" aria-hidden="true"></i></span>
+                </div>
+              </div>
+            </a>
+
+            <a class="dest-card" href="#" data-reveal style="--reveal-delay: 0.16s">
+              <div class="dest-card__media">
+                <img src="img/dest-khiva.jpg" alt="Хива, старый город" loading="lazy" />
+              </div>
+              <div class="dest-card__body">
+                <div class="dest-card__route">
+                  Ташкент <i class="ph ph-arrow-right" aria-hidden="true"></i> Хива
+                </div>
+                <div class="dest-card__bottom">
+                  <div class="dest-card__meta">
+                  <div class="dest-card__time">
+                  <i class="ph ph-clock" aria-hidden="true"></i> 7 ч 20 мин
+                </div>
+                  <div class="dest-card__price"><span>от</span>180 000 UZS</div>
+                  </div>
+                  <span class="circle-btn"><i class="ph ph-arrow-right" aria-hidden="true"></i></span>
+                </div>
+              </div>
+            </a>
+
+            <a class="dest-card" href="#" data-reveal style="--reveal-delay: 0.24s">
+              <div class="dest-card__media">
+                <img src="img/dest-fergana.jpg" alt="Ферганская долина" loading="lazy" />
+              </div>
+              <div class="dest-card__body">
+                <div class="dest-card__route">
+                  Ташкент <i class="ph ph-arrow-right" aria-hidden="true"></i> Фергана
+                </div>
+                <div class="dest-card__bottom">
+                  <div class="dest-card__meta">
+                  <div class="dest-card__time">
+                  <i class="ph ph-clock" aria-hidden="true"></i> 4 ч 10 мин
+                </div>
+                  <div class="dest-card__price"><span>от</span>110 000 UZS</div>
+                  </div>
+                  <span class="circle-btn"><i class="ph ph-arrow-right" aria-hidden="true"></i></span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================== Transport -->
+      <section class="section" id="transport">
+        <div class="container">
+          <div class="section-head" data-reveal>
+            <div>
+              <h2>Выберите удобный транспорт</h2>
+              <p>Путешествуйте так, как удобно именно вам</p>
+            </div>
+          </div>
+
+          <div class="transport-grid">
+            <article class="transport-card" data-reveal style="--reveal-delay: 0s">
+              <div class="transport-card__media">
+                <img src="img/transport-train.jpg" alt="Высокоскоростной поезд" loading="lazy" />
+              </div>
+              <div class="transport-card__body">
+                <h3 class="transport-card__title">Поезд</h3>
+                <p class="transport-card__text">Комфортные поездки по всей стране</p>
+                <ul class="transport-features">
+                  <li><i class="ph ph-train-simple" aria-hidden="true"></i>Удобные вагоны</li>
+                  <li><i class="ph ph-squares-four" aria-hidden="true"></i>Разные классы</li>
+                  <li><i class="ph ph-ticket" aria-hidden="true"></i>Электронные билеты</li>
+                </ul>
+              </div>
+              <a class="transport-card__cta" href="#" aria-label="Подробнее о поездах">
+                <i class="ph ph-arrow-right" aria-hidden="true"></i>
+              </a>
+            </article>
+
+            <article class="transport-card" data-reveal style="--reveal-delay: 0.1s">
+              <div class="transport-card__media">
+                <img src="img/transport-bus.jpg" alt="Междугородний автобус" loading="lazy" />
+              </div>
+              <div class="transport-card__body">
+                <h3 class="transport-card__title">Автобус</h3>
+                <p class="transport-card__text">Доступные поездки в любые города</p>
+                <ul class="transport-features">
+                  <li><i class="ph ph-money" aria-hidden="true"></i>Выгодные цены</li>
+                  <li><i class="ph ph-road-horizon" aria-hidden="true"></i>Большой выбор рейсов</li>
+                  <li><i class="ph ph-armchair" aria-hidden="true"></i>Удобные места</li>
+                </ul>
+              </div>
+              <a class="transport-card__cta" href="#" aria-label="Подробнее об автобусах">
+                <i class="ph ph-arrow-right" aria-hidden="true"></i>
+              </a>
+            </article>
+
+            <article class="transport-card" data-reveal style="--reveal-delay: 0.2s">
+              <div class="transport-card__media">
+                <img src="img/transport-plane.jpg" alt="Самолёт в небе" loading="lazy" />
+              </div>
+              <div class="transport-card__body">
+                <h3 class="transport-card__title">Самолёт</h3>
+                <p class="transport-card__text">Быстро и комфортно в любую точку</p>
+                <ul class="transport-features">
+                  <li><i class="ph ph-timer" aria-hidden="true"></i>Экономия времени</li>
+                  <li><i class="ph ph-airplane" aria-hidden="true"></i>Разные авиакомпании</li>
+                  <li><i class="ph ph-calendar-check" aria-hidden="true"></i>Удобное бронирование</li>
+                </ul>
+              </div>
+              <a class="transport-card__cta" href="#" aria-label="Подробнее о перелётах">
+                <i class="ph ph-arrow-right" aria-hidden="true"></i>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================== App banner -->
+      <section class="container">
+        <div class="app-banner" data-reveal>
+          <div class="app-banner__copy">
+            <div class="app-banner__top">
+              <span class="logo logo--ghost">ticketsale.uz</span>
+              <div class="app-banner__text">
+                <span class="app-banner__kicker">ticketsale.uz Mobile</span>
+                <h2>Покупайте билеты в приложении</h2>
+                <p class="app-banner__sub">Ещё удобнее, ещё быстрее</p>
+              </div>
+            </div>
+
+            <ul class="app-features">
+              <li><i class="ph ph-bell" aria-hidden="true"></i>Уведомления о рейсах</li>
+              <li><i class="ph ph-bookmark" aria-hidden="true"></i>Сохранённые маршруты</li>
+              <li><i class="ph ph-credit-card" aria-hidden="true"></i>Быстрая оплата</li>
+              <li><i class="ph ph-headset" aria-hidden="true"></i>Поддержка 24/7</li>
+            </ul>
+          </div>
+
+          <div class="phone-wrap" aria-hidden="true">
+            <div class="phone">
+              <div class="phone__screen">
+                <div class="phone__notch"></div>
+
+                <div class="phone-ui__top">
+                  <span class="phone-ui__logo">ticketsale.uz</span>
+                  <span class="phone-ui__icons">
+                    <i class="ph ph-magnifying-glass"></i>
+                    <i class="ph ph-user"></i>
+                  </span>
+                </div>
+
+                <div class="phone-card">
+                  <div class="phone-tabs">
+                    <span class="on">Поезд</span>
+                    <span>Автобус</span>
+                    <span>Самолёт</span>
+                  </div>
+                  <div class="phone-field">
+                    <i class="ph ph-map-pin"></i>
+                    <span><em>Откуда</em> <b>Ташкент</b></span>
+                  </div>
+                  <div class="phone-field">
+                    <i class="ph ph-map-pin"></i>
+                    <span><em>Куда</em> <b>Самарканд</b></span>
+                  </div>
+                  <div class="phone-go">Найти билеты</div>
+                </div>
+
+                <div class="phone-route">
+                  <img src="img/dest-samarkand.jpg" alt="" />
+                  <span>
+                    <b>Ташкент → Самарканд</b>
+                    <span>2 ч 10 мин · от 120 000 UZS</span>
+                  </span>
+                  <i class="ph ph-arrow-right"></i>
+                </div>
+                <div class="phone-route">
+                  <img src="img/dest-bukhara.jpg" alt="" />
+                  <span>
+                    <b>Ташкент → Бухара</b>
+                    <span>4 ч 30 мин · от 140 000 UZS</span>
+                  </span>
+                  <i class="ph ph-arrow-right"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="download">
+            <div class="qr">
+              <img src="img/qr.png" alt="QR-код для скачивания приложения" />
+            </div>
+            <div class="download__aside">
+              <div class="download__title">Скачайте приложение</div>
+              <div class="store-badges">
+                <a class="store-badge" href="#">
+                  <img src="img/icon-apple.svg" alt="" />
+                  <span><small>Загрузите в</small><b>App Store</b></span>
+                </a>
+                <a class="store-badge" href="#">
+                  <img src="img/icon-googleplay.svg" alt="" />
+                  <span><small>Доступно в</small><b>Google Play</b></span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============================================ Footer -->
+    <footer class="site-footer" id="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <a class="logo" href="#">ticketsale.uz</a>
+          </div>
+
+          <div class="footer-col">
+            <h4>О нас</h4>
+            <p class="footer-about">
+              ticketsale.uz — это удобный сервис для покупки билетов на поезд,
+              автобус и самолёт по всему Узбекистану. Мы делаем путешествия
+              доступнее, проще и комфортнее для каждого.
+            </p>
+          </div>
+
+          <div class="footer-col">
+            <h4>Быстрые ссылки</h4>
+            <ul class="footer-links">
+              <li><a href="#">Главная</a></li>
+              <li><a href="#directions">Билеты</a></li>
+              <li><a href="#transport">Услуги</a></li>
+              <li><a href="#footer">Поддержка</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Контакты</h4>
+            <ul class="footer-contacts">
+              <li><i class="ph ph-phone" aria-hidden="true"></i>+998 71 123 45 67</li>
+              <li><i class="ph ph-envelope" aria-hidden="true"></i>support@ticketsale.uz</li>
+              <li><i class="ph ph-map-pin" aria-hidden="true"></i>Ташкент, Узбекистан</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <span>© 2026 ticketsale.uz. Все права защищены.</span>
+          <div class="socials">
+            <a href="#" aria-label="Telegram"><img src="img/icon-telegram.svg" alt="" /></a>
+            <a href="#" aria-label="Instagram"><img src="img/icon-instagram.svg" alt="" /></a>
+            <a href="#" aria-label="YouTube"><img src="img/icon-youtube.svg" alt="" /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

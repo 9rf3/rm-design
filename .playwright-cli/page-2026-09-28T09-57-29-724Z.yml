@@ -1,0 +1,358 @@
+- generic [active] [ref=f12e1]:
+  - banner [ref=f12e2]:
+    - generic [ref=f12e3]:
+      - link "ticketsale.uz — на главную" [ref=f12e4] [cursor=pointer]:
+        - /url: "#"
+        - text: ticketsale.uz
+      - navigation "Главное меню" [ref=f12e5]:
+        - link [ref=f12e6] [cursor=pointer]:
+          - /url: "#"
+          - generic [ref=f12e7]:
+            - generic [aria-hidden] [ref=f12e8]: 
+            - text: Главная
+        - link [ref=f12e9] [cursor=pointer]:
+          - /url: "#directions"
+          - generic [ref=f12e10]:
+            - generic [aria-hidden] [ref=f12e11]: 
+            - text: Билеты
+        - link [ref=f12e12] [cursor=pointer]:
+          - /url: "#transport"
+          - generic [ref=f12e13]:
+            - generic [aria-hidden] [ref=f12e14]: 
+            - text: Услуги
+        - link [ref=f12e15] [cursor=pointer]:
+          - /url: "#footer"
+          - generic [ref=f12e16]:
+            - generic [aria-hidden] [ref=f12e17]: 
+            - text: Поддержка
+      - generic [ref=f12e18]:
+        - button "Поиск билетов" [ref=f12e19] [cursor=pointer]:
+          - generic [aria-hidden] [ref=f12e20]: 
+        - link "Войти" [ref=f12e21] [cursor=pointer]:
+          - /url: "#"
+        - link "Регистрация" [ref=f12e22] [cursor=pointer]:
+          - /url: "#"
+          - generic [aria-hidden] [ref=f12e23]: 
+          - text: Регистрация
+        - text: 
+    - text:    
+  - main [ref=f12e24]:
+    - generic [ref=f12e26]:
+      - generic [ref=f12e28]:
+        - generic [ref=f12e29]:
+          - generic [aria-hidden] [ref=f12e30]: 
+          - text: Путешествуйте по всему Узбекистану
+        - heading "Билеты на поезд, автобус и самолёт" [level=1] [ref=f12e31]:
+          - text: Билеты на поезд,
+          - generic [ref=f12e32]: автобус и самолёт
+        - paragraph [ref=f12e33]: Быстро. Удобно. Надёжно.
+      - generic [ref=f12e34]:
+        - tablist "Вид транспорта" [ref=f12e35]:
+          - tab "Поезд" [selected] [ref=f12e36] [cursor=pointer]:
+            - generic [aria-hidden] [ref=f12e37]: 
+            - text: Поезд
+          - tab "Автобус" [ref=f12e38] [cursor=pointer]:
+            - generic [aria-hidden] [ref=f12e39]: 
+            - text: Автобус
+          - tab "Самолёт" [ref=f12e40] [cursor=pointer]:
+            - generic [aria-hidden] [ref=f12e41]: 
+            - text: Самолёт
+        - generic [ref=f12e42]:
+          - generic [ref=f12e43]:
+            - generic [aria-hidden] [ref=f12e44]: 
+            - generic [ref=f12e45]:
+              - generic [ref=f12e46]: Откуда
+              - textbox "Откуда" [ref=f12e47]: Ташкент
+          - button "Поменять местами" [ref=f12e48] [cursor=pointer]:
+            - generic [aria-hidden] [ref=f12e49]: 
+          - generic [ref=f12e50]:
+            - generic [aria-hidden] [ref=f12e51]: 
+            - generic [ref=f12e52]:
+              - generic [ref=f12e53]: Куда
+              - textbox "Куда" [ref=f12e54]: Самарканд
+          - generic [ref=f12e55] [cursor=pointer]:
+            - generic [aria-hidden] [ref=f12e56]: 
+            - generic [ref=f12e57]:
+              - generic [ref=f12e58]: Дата поездки
+              - generic [ref=f12e59]: 12 окт. 2026
+            - textbox "Дата поездки" [ref=f12e60]: 2026-10-12
+          - button "Пассажиры 2 человека" [ref=f12e61] [cursor=pointer]:
+            - generic [aria-hidden] [ref=f12e62]: 
+            - generic [ref=f12e63]:
+              - generic [ref=f12e64]: Пассажиры
+              - generic [ref=f12e65]: 2 человека
+            - generic [aria-hidden] [ref=f12e66]: 
+            - text:  
+          - generic [ref=f12e67]:
+            - generic [ref=f12e68]:
+              - generic [aria-hidden] [ref=f12e69]: 
+              - text: Цена (UZS)
+            - generic [ref=f12e70]:
+              - slider "Минимальная цена": "420000"
+              - slider "Максимальная цена": "1150000"
+            - generic [ref=f12e73]:
+              - generic [ref=f12e74]: 100 000
+              - generic [ref=f12e75]: 1 500 000
+          - button "Найти билеты" [ref=f12e76] [cursor=pointer]:
+            - generic [aria-hidden] [ref=f12e77]: 
+      - list [ref=f12e79]:
+        - listitem [ref=f12e80]:
+          - generic [aria-hidden] [ref=f12e82]: 
+          - generic [ref=f12e83]:
+            - generic [ref=f12e84]: Быстрый поиск
+            - generic [ref=f12e85]: Билеты за несколько секунд
+        - listitem [ref=f12e86]:
+          - generic [aria-hidden] [ref=f12e88]: 
+          - generic [ref=f12e89]:
+            - generic [ref=f12e90]: Безопасная оплата
+            - generic [ref=f12e91]: Надёжные платежи
+        - listitem [ref=f12e92]:
+          - generic [aria-hidden] [ref=f12e94]: 
+          - generic [ref=f12e95]:
+            - generic [ref=f12e96]: Электронные билеты
+            - generic [ref=f12e97]: Без очередей
+        - listitem [ref=f12e98]:
+          - generic [aria-hidden] [ref=f12e100]: 
+          - generic [ref=f12e101]:
+            - generic [ref=f12e102]: Поддержка 24/7
+            - generic [ref=f12e103]: Мы всегда на связи
+    - generic [ref=f12e105]:
+      - generic [ref=f12e106]:
+        - heading "Популярные направления" [level=2] [ref=f12e107]
+        - link "Смотреть все" [ref=f12e108] [cursor=pointer]:
+          - /url: "#"
+          - text: Смотреть все
+          - generic [aria-hidden] [ref=f12e109]: 
+      - generic [ref=f12e110]:
+        - link "Самарканд, площадь Регистан Ташкент Самарканд 2 ч 10 мин от120 000 UZS" [ref=f12e111] [cursor=pointer]:
+          - /url: "#"
+          - img "Самарканд, площадь Регистан" [ref=f12e113]
+          - generic [ref=f12e114]:
+            - generic [ref=f12e115]:
+              - text: Ташкент
+              - generic [aria-hidden] [ref=f12e116]: 
+              - text: Самарканд
+            - generic [ref=f12e117]:
+              - generic [ref=f12e118]:
+                - generic [ref=f12e119]:
+                  - generic [aria-hidden] [ref=f12e120]: 
+                  - text: 2 ч 10 мин
+                - generic [ref=f12e121]: от120 000 UZS
+              - generic [aria-hidden] [ref=f12e123]: 
+        - link "Бухара, минарет Калон Ташкент Бухара 4 ч 30 мин от140 000 UZS" [ref=f12e124] [cursor=pointer]:
+          - /url: "#"
+          - img "Бухара, минарет Калон" [ref=f12e126]
+          - generic [ref=f12e127]:
+            - generic [ref=f12e128]:
+              - text: Ташкент
+              - generic [aria-hidden] [ref=f12e129]: 
+              - text: Бухара
+            - generic [ref=f12e130]:
+              - generic [ref=f12e131]:
+                - generic [ref=f12e132]:
+                  - generic [aria-hidden] [ref=f12e133]: 
+                  - text: 4 ч 30 мин
+                - generic [ref=f12e134]: от140 000 UZS
+              - generic [aria-hidden] [ref=f12e136]: 
+        - link "Хива, старый город Ташкент Хива 7 ч 20 мин от180 000 UZS" [ref=f12e137] [cursor=pointer]:
+          - /url: "#"
+          - img "Хива, старый город" [ref=f12e139]
+          - generic [ref=f12e140]:
+            - generic [ref=f12e141]:
+              - text: Ташкент
+              - generic [aria-hidden] [ref=f12e142]: 
+              - text: Хива
+            - generic [ref=f12e143]:
+              - generic [ref=f12e144]:
+                - generic [ref=f12e145]:
+                  - generic [aria-hidden] [ref=f12e146]: 
+                  - text: 7 ч 20 мин
+                - generic [ref=f12e147]: от180 000 UZS
+              - generic [aria-hidden] [ref=f12e149]: 
+        - link "Ферганская долина Ташкент Фергана 4 ч 10 мин от110 000 UZS" [ref=f12e150] [cursor=pointer]:
+          - /url: "#"
+          - img "Ферганская долина" [ref=f12e152]
+          - generic [ref=f12e153]:
+            - generic [ref=f12e154]:
+              - text: Ташкент
+              - generic [aria-hidden] [ref=f12e155]: 
+              - text: Фергана
+            - generic [ref=f12e156]:
+              - generic [ref=f12e157]:
+                - generic [ref=f12e158]:
+                  - generic [aria-hidden] [ref=f12e159]: 
+                  - text: 4 ч 10 мин
+                - generic [ref=f12e160]: от110 000 UZS
+              - generic [aria-hidden] [ref=f12e162]: 
+    - generic [ref=f12e164]:
+      - generic [ref=f12e166]:
+        - heading "Выберите удобный транспорт" [level=2] [ref=f12e167]
+        - paragraph [ref=f12e168]: Путешествуйте так, как удобно именно вам
+      - generic [ref=f12e169]:
+        - article [ref=f12e170]:
+          - img "Высокоскоростной поезд" [ref=f12e172]
+          - generic [ref=f12e173]:
+            - heading "Поезд" [level=3] [ref=f12e174]
+            - paragraph [ref=f12e175]: Комфортные поездки по всей стране
+            - list [ref=f12e176]:
+              - listitem [ref=f12e177]:
+                - generic [aria-hidden] [ref=f12e178]: 
+                - text: Удобные вагоны
+              - listitem [ref=f12e179]:
+                - generic [aria-hidden] [ref=f12e180]: 
+                - text: Разные классы
+              - listitem [ref=f12e181]:
+                - generic [aria-hidden] [ref=f12e182]: 
+                - text: Электронные билеты
+          - link "Подробнее о поездах" [ref=f12e183] [cursor=pointer]:
+            - /url: "#"
+            - generic [aria-hidden] [ref=f12e184]: 
+        - article [ref=f12e185]:
+          - img "Междугородний автобус" [ref=f12e187]
+          - generic [ref=f12e188]:
+            - heading "Автобус" [level=3] [ref=f12e189]
+            - paragraph [ref=f12e190]: Доступные поездки в любые города
+            - list [ref=f12e191]:
+              - listitem [ref=f12e192]:
+                - generic [aria-hidden] [ref=f12e193]: 
+                - text: Выгодные цены
+              - listitem [ref=f12e194]:
+                - generic [aria-hidden] [ref=f12e195]: 
+                - text: Большой выбор рейсов
+              - listitem [ref=f12e196]:
+                - generic [aria-hidden] [ref=f12e197]: 
+                - text: Удобные места
+          - link "Подробнее об автобусах" [ref=f12e198] [cursor=pointer]:
+            - /url: "#"
+            - generic [aria-hidden] [ref=f12e199]: 
+        - article [ref=f12e200]:
+          - img "Самолёт в небе" [ref=f12e202]
+          - generic [ref=f12e203]:
+            - heading "Самолёт" [level=3] [ref=f12e204]
+            - paragraph [ref=f12e205]: Быстро и комфортно в любую точку
+            - list [ref=f12e206]:
+              - listitem [ref=f12e207]:
+                - generic [aria-hidden] [ref=f12e208]: 
+                - text: Экономия времени
+              - listitem [ref=f12e209]:
+                - generic [aria-hidden] [ref=f12e210]: 
+                - text: Разные авиакомпании
+              - listitem [ref=f12e211]:
+                - generic [aria-hidden] [ref=f12e212]: 
+                - text: Удобное бронирование
+          - link "Подробнее о перелётах" [ref=f12e213] [cursor=pointer]:
+            - /url: "#"
+            - generic [aria-hidden] [ref=f12e214]: 
+    - generic [ref=f12e216]:
+      - generic [ref=f12e217]:
+        - generic [ref=f12e218]:
+          - generic [ref=f12e219]: ticketsale.uz
+          - generic [ref=f12e220]:
+            - generic [ref=f12e221]: ticketsale.uz Mobile
+            - heading "Покупайте билеты в приложении" [level=2] [ref=f12e222]
+            - paragraph [ref=f12e223]: Ещё удобнее, ещё быстрее
+        - list [ref=f12e224]:
+          - listitem [ref=f12e225]:
+            - generic [aria-hidden] [ref=f12e226]: 
+            - text: Уведомления о рейсах
+          - listitem [ref=f12e227]:
+            - generic [aria-hidden] [ref=f12e228]: 
+            - text: Сохранённые маршруты
+          - listitem [ref=f12e229]:
+            - generic [aria-hidden] [ref=f12e230]: 
+            - text: Быстрая оплата
+          - listitem [ref=f12e231]:
+            - generic [aria-hidden] [ref=f12e232]: 
+            - text: Поддержка 24/7
+      - generic [ref=f12e235]:
+        - generic [ref=f12e237]:
+          - generic [ref=f12e238]: ticketsale.uz
+          - generic [ref=f12e239]:
+            - generic [ref=f12e240]: 
+            - generic [ref=f12e241]: 
+        - generic [ref=f12e242]:
+          - generic [ref=f12e243]:
+            - generic [ref=f12e244]: Поезд
+            - generic [ref=f12e245]: Автобус
+            - generic [ref=f12e246]: Самолёт
+          - generic [ref=f12e247]:
+            - generic [ref=f12e248]: 
+            - generic [ref=f12e249]:
+              - emphasis [ref=f12e250]: Откуда
+              - text: Ташкент
+          - generic [ref=f12e251]:
+            - generic [ref=f12e252]: 
+            - generic [ref=f12e253]:
+              - emphasis [ref=f12e254]: Куда
+              - text: Самарканд
+          - generic [ref=f12e255]: Найти билеты
+        - generic [ref=f12e256]:
+          - generic [ref=f12e257]:
+            - generic [ref=f12e258]: Ташкент → Самарканд
+            - text: 2 ч 10 мин · от 120 000 UZS
+          - generic [ref=f12e259]: 
+        - generic [ref=f12e260]:
+          - generic [ref=f12e261]:
+            - generic [ref=f12e262]: Ташкент → Бухара
+            - text: 4 ч 30 мин · от 140 000 UZS
+          - generic [ref=f12e263]: 
+      - generic [ref=f12e264]:
+        - img "QR-код для скачивания приложения" [ref=f12e266]
+        - generic [ref=f12e267]:
+          - generic [ref=f12e268]: Скачайте приложение
+          - generic [ref=f12e269]:
+            - link "Загрузите в App Store" [ref=f12e270] [cursor=pointer]:
+              - /url: "#"
+              - generic [ref=f12e271]:
+                - generic [ref=f12e272]: Загрузите в
+                - generic [ref=f12e273]: App Store
+            - link "Доступно в Google Play" [ref=f12e274] [cursor=pointer]:
+              - /url: "#"
+              - generic [ref=f12e275]:
+                - generic [ref=f12e276]: Доступно в
+                - generic [ref=f12e277]: Google Play
+  - contentinfo [ref=f12e278]:
+    - generic [ref=f12e279]:
+      - generic [ref=f12e280]:
+        - link "ticketsale.uz" [ref=f12e282] [cursor=pointer]:
+          - /url: "#"
+        - generic [ref=f12e283]:
+          - heading "О нас" [level=4] [ref=f12e284]
+          - paragraph [ref=f12e285]: ticketsale.uz — это удобный сервис для покупки билетов на поезд, автобус и самолёт по всему Узбекистану. Мы делаем путешествия доступнее, проще и комфортнее для каждого.
+        - generic [ref=f12e286]:
+          - heading "Быстрые ссылки" [level=4] [ref=f12e287]
+          - list [ref=f12e288]:
+            - listitem [ref=f12e289]:
+              - link "Главная" [ref=f12e290] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=f12e291]:
+              - link "Билеты" [ref=f12e292] [cursor=pointer]:
+                - /url: "#directions"
+            - listitem [ref=f12e293]:
+              - link "Услуги" [ref=f12e294] [cursor=pointer]:
+                - /url: "#transport"
+            - listitem [ref=f12e295]:
+              - link "Поддержка" [ref=f12e296] [cursor=pointer]:
+                - /url: "#footer"
+        - generic [ref=f12e297]:
+          - heading "Контакты" [level=4] [ref=f12e298]
+          - list [ref=f12e299]:
+            - listitem [ref=f12e300]:
+              - generic [aria-hidden] [ref=f12e301]: 
+              - text: +998 71 123 45 67
+            - listitem [ref=f12e302]:
+              - generic [aria-hidden] [ref=f12e303]: 
+              - text: support@ticketsale.uz
+            - listitem [ref=f12e304]:
+              - generic [aria-hidden] [ref=f12e305]: 
+              - text: Ташкент, Узбекистан
+      - generic [ref=f12e306]:
+        - generic [ref=f12e307]: © 2026 ticketsale.uz. Все права защищены.
+        - generic [ref=f12e308]:
+          - link "Telegram" [ref=f12e309] [cursor=pointer]:
+            - /url: "#"
+          - link "Instagram" [ref=f12e310] [cursor=pointer]:
+            - /url: "#"
+          - link "YouTube" [ref=f12e311] [cursor=pointer]:
+            - /url: "#"
+  - status
