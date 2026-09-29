@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 260" width="980" height="260">
+  <defs>
+    <linearGradient id="tr1body" x1="0" y1="48" x2="0" y2="184" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset=".38" stop-color="#fafdff"/>
+      <stop offset=".74" stop-color="#e2ebf8"/>
+      <stop offset="1" stop-color="#bccde5"/>
+    </linearGradient>
+    <linearGradient id="tr1glass" x1="0" y1="66" x2="0" y2="114" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1a4d84"/>
+      <stop offset=".55" stop-color="#0c2a52"/>
+      <stop offset="1" stop-color="#06162e"/>
+    </linearGradient>
+    <linearGradient id="tr1accent" x1="310" y1="0" x2="860" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0469fa" stop-opacity=".35"/>
+      <stop offset=".5" stop-color="#0aa8ff"/>
+      <stop offset="1" stop-color="#59e6ff"/>
+    </linearGradient>
+    <linearGradient id="tr1trail" x1="26" y1="0" x2="312" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#37d4ff" stop-opacity="0"/>
+      <stop offset=".42" stop-color="#37d4ff" stop-opacity=".4"/>
+      <stop offset=".82" stop-color="#6ce8ff" stop-opacity=".9"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity=".95"/>
+    </linearGradient>
+    <radialGradient id="tr1glow" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#7ef0ff" stop-opacity=".8"/>
+      <stop offset=".5" stop-color="#2aa6ff" stop-opacity=".3"/>
+      <stop offset="1" stop-color="#2aa6ff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="tr1b1" x="-70%" y="-300%" width="240%" height="700%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+    <filter id="tr1b2" x="-70%" y="-500%" width="240%" height="1100%">
+      <feGaussianBlur stdDeviation="2.4"/>
+    </filter>
+    <filter id="tr1b3" x="-70%" y="-400%" width="240%" height="900%">
+      <feGaussianBlur stdDeviation="11"/>
+    </filter>
+  </defs>
+
+  <!-- motion trail -->
+  <g>
+    <ellipse cx="300" cy="128" rx="150" ry="40" fill="url(#tr1glow)" filter="url(#tr1b3)"/>
+    <rect x="24" y="122" width="290" height="11" rx="5.5" fill="url(#tr1trail)" filter="url(#tr1b1)" opacity=".9"/>
+    <rect x="112" y="102" width="210" height="5" rx="2.5" fill="url(#tr1trail)" filter="url(#tr1b2)" opacity=".55"/>
+    <rect x="70" y="150" width="252" height="5" rx="2.5" fill="url(#tr1trail)" filter="url(#tr1b2)" opacity=".5"/>
+    <rect x="188" y="126" width="132" height="4" rx="2" fill="#e8fcff" filter="url(#tr1b2)" opacity=".9"/>
+  </g>
+
+  <!-- under-carriage -->
+  <rect x="316" y="176" width="536" height="20" fill="#d7e3f2"/>
+  <rect x="334" y="188" width="104" height="22" rx="7" fill="#0a1b33"/>
+  <rect x="704" y="188" width="106" height="22" rx="7" fill="#0a1b33"/>
+  <g fill="#0a1b33">
+    <circle cx="360" cy="204" r="13"/><circle cx="406" cy="204" r="13"/>
+    <circle cx="732" cy="204" r="13"/><circle cx="784" cy="204" r="13"/>
+  </g>
+  <g fill="#2c4straight" opacity="0"/>
+  <g fill="#3f5f8f">
+    <circle cx="360" cy="204" r="5"/><circle cx="406" cy="204" r="5"/>
+    <circle cx="732" cy="204" r="5"/><circle cx="784" cy="204" r="5"/>
+  </g>
+
+  <!-- body -->
+  <path d="M306 66c0-10 8-16 20-16h400c94 2 174 34 218 82 8 9 8 20 0 26-28 18-64 24-98 24H326c-12 0-20-6-20-16z" fill="url(#tr1body)"/>
+
+  <!-- roof + pantograph -->
+  <path d="M330 52h392c6 0 10 2 14 4H330z" fill="#ffffff" opacity=".85"/>
+  <g stroke="#0a1b33" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M572 50 610 30h38l8 20"/>
+  </g>
+  <rect x="596" y="24" width="66" height="6" rx="3" fill="#0a1b33"/>
+
+  <!-- car joints -->
+  <g stroke="#a9beda" stroke-width="3">
+    <path d="M474 54v124"/>
+    <path d="M626 54v124"/>
+  </g>
+  <g stroke="#ffffff" stroke-width="1.5" opacity=".9">
+    <path d="M477 54v124"/>
+    <path d="M629 54v124"/>
+  </g>
+
+  <!-- side glass -->
+  <rect x="322" y="68" width="446" height="46" rx="9" fill="url(#tr1glass)"/>
+  <rect x="330" y="74" width="430" height="12" rx="6" fill="#5aa6ff" opacity=".22"/>
+  <g stroke="#ffffff" stroke-width="2.5" opacity=".55">
+    <path d="M476 70v42"/>
+    <path d="M628 70v42"/>
+  </g>
+
+  <!-- windshield -->
+  <path d="M786 56c60 4 116 34 146 74 6 8 0 16-9 11-36-22-90-40-136-46-13-2-17-16-11-30 2-5 5-9 10-9z" fill="url(#tr1glass)"/>
+  <path d="M794 62c56 6 108 32 136 68" stroke="#8feaff" stroke-width="3" stroke-linecap="round" opacity=".55" fill="none"/>
+
+  <!-- nose accent + headlight -->
+  <path d="M846 176c44 0 78-8 100-24-2 14-16 28-44 34-22 5-40 6-56 6z" fill="#0469fa" opacity=".9"/>
+  <path d="M838 166h56" stroke="url(#tr1accent)" stroke-width="7" stroke-linecap="round" filter="url(#tr1b2)" fill="none"/>
+  <ellipse cx="930" cy="146" rx="12" ry="15" fill="#eafcff"/>
+  <ellipse cx="930" cy="146" rx="24" ry="24" fill="#5fe6ff" opacity=".55" filter="url(#tr1b1)"/>
+
+  <!-- lower accent line -->
+  <rect x="318" y="158" width="520" height="7" rx="3.5" fill="url(#tr1accent)"/>
+  <rect x="318" y="158" width="520" height="7" rx="3.5" fill="#8ff2ff" opacity=".65" filter="url(#tr1b2)"/>
+  <path d="M336 138h400" stroke="#ffffff" stroke-width="3" opacity=".5" stroke-linecap="round" fill="none"/>
+</svg>

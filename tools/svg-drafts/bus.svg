@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 260" width="820" height="260">
+  <defs>
+    <linearGradient id="bu1body" x1="0" y1="42" x2="0" y2="190" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset=".42" stop-color="#fbfdff"/>
+      <stop offset=".78" stop-color="#e4ecf8"/>
+      <stop offset="1" stop-color="#bccde4"/>
+    </linearGradient>
+    <linearGradient id="bu1glass" x1="0" y1="52" x2="0" y2="166" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1b4f86"/>
+      <stop offset=".5" stop-color="#0d2b53"/>
+      <stop offset="1" stop-color="#06152c"/>
+    </linearGradient>
+    <linearGradient id="bu1skirt" x1="0" y1="164" x2="0" y2="186" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#e9f0fa"/>
+      <stop offset="1" stop-color="#aebfd7"/>
+    </linearGradient>
+    <linearGradient id="bu1accent" x1="196" y1="0" x2="772" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0469fa" stop-opacity=".25"/>
+      <stop offset=".45" stop-color="#12b6ff"/>
+      <stop offset="1" stop-color="#7df1ff"/>
+    </linearGradient>
+    <linearGradient id="bu1rim" x1="0" y1="148" x2="0" y2="216" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f2f7fd"/>
+      <stop offset="1" stop-color="#b9c8dc"/>
+    </linearGradient>
+    <linearGradient id="bu1trail" x1="14" y1="0" x2="176" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#37d4ff" stop-opacity="0"/>
+      <stop offset=".45" stop-color="#37d4ff" stop-opacity=".4"/>
+      <stop offset=".84" stop-color="#6ce8ff" stop-opacity=".9"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity=".95"/>
+    </linearGradient>
+    <radialGradient id="bu1glow" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#7ef0ff" stop-opacity=".75"/>
+      <stop offset=".5" stop-color="#2aa6ff" stop-opacity=".28"/>
+      <stop offset="1" stop-color="#2aa6ff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="bu1b1" x="-80%" y="-300%" width="260%" height="700%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+    <filter id="bu1b2" x="-80%" y="-500%" width="260%" height="1100%">
+      <feGaussianBlur stdDeviation="2.4"/>
+    </filter>
+    <filter id="bu1b3" x="-80%" y="-400%" width="260%" height="900%">
+      <feGaussianBlur stdDeviation="11"/>
+    </filter>
+  </defs>
+
+  <!-- motion trail -->
+  <g>
+    <ellipse cx="164" cy="126" rx="120" ry="38" fill="url(#bu1glow)" filter="url(#bu1b3)"/>
+    <rect x="12" y="120" width="166" height="11" rx="5.5" fill="url(#bu1trail)" filter="url(#bu1b1)" opacity=".9"/>
+    <rect x="66" y="100" width="118" height="5" rx="2.5" fill="url(#bu1trail)" filter="url(#bu1b2)" opacity=".55"/>
+    <rect x="40" y="148" width="146" height="5" rx="2.5" fill="url(#bu1trail)" filter="url(#bu1b2)" opacity=".5"/>
+    <rect x="112" y="124" width="76" height="4" rx="2" fill="#e8fcff" filter="url(#bu1b2)" opacity=".9"/>
+  </g>
+
+  <!-- wheels -->
+  <g>
+    <circle cx="276" cy="182" r="34" fill="#0a1b33"/>
+    <circle cx="276" cy="182" r="18" fill="url(#bu1rim)"/>
+    <circle cx="276" cy="182" r="6" fill="#33507a"/>
+    <circle cx="690" cy="182" r="34" fill="#0a1b33"/>
+    <circle cx="690" cy="182" r="18" fill="url(#bu1rim)"/>
+    <circle cx="690" cy="182" r="6" fill="#33507a"/>
+  </g>
+
+  <!-- body -->
+  <path d="M172 64c0-12 10-20 24-20h496c54 0 88 16 100 42 7 17 10 42 10 66 0 26-6 40-18 46-10 4-22 6-38 6H196c-14 0-24-8-24-22z" fill="url(#bu1body)"/>
+
+  <!-- glass -->
+  <rect x="192" y="58" width="516" height="56" rx="11" fill="url(#bu1glass)"/>
+  <path d="M710 52c40 0 70 14 80 40 6 17 8 40 8 62 0 16-4 26-14 30l-44 2c-16 0-28-10-28-26z" fill="url(#bu1glass)"/>
+  <rect x="200" y="65" width="500" height="13" rx="6.5" fill="#5aa6ff" opacity=".2"/>
+  <path d="M718 60c34 4 60 18 70 42" stroke="#8feaff" stroke-width="3" stroke-linecap="round" opacity=".45" fill="none"/>
+  <g fill="#ffffff" opacity=".85">
+    <rect x="366" y="56" width="7" height="60" rx="3"/>
+    <rect x="530" y="56" width="7" height="60" rx="3"/>
+  </g>
+
+  <!-- door -->
+  <g stroke="#b7c8de" stroke-width="3" fill="none">
+    <path d="M300 60v122"/>
+    <path d="M344 60v122"/>
+  </g>
+  <path d="M300 60h44v122h-44z" fill="#ffffff" opacity=".18"/>
+
+  <!-- accent lighting -->
+  <rect x="198" y="130" width="566" height="6" rx="3" fill="url(#bu1accent)"/>
+  <rect x="198" y="130" width="566" height="6" rx="3" fill="#9df4ff" opacity=".7" filter="url(#bu1b2)"/>
+  <path d="M204 146h420" stroke="#0469fa" stroke-width="5" stroke-linecap="round" opacity=".28" fill="none"/>
+
+  <!-- skirt -->
+  <rect x="176" y="164" width="614" height="22" fill="url(#bu1skirt)"/>
+  <path d="M186 172h600" stroke="#ffffff" stroke-width="3" opacity=".6" fill="none"/>
+
+  <!-- headlight + rear light -->
+  <rect x="774" y="146" width="24" height="22" rx="9" fill="#eafcff"/>
+  <rect x="774" y="146" width="24" height="22" rx="9" fill="#7cf0ff" opacity=".7" filter="url(#bu1b1)"/>
+  <rect x="174" y="148" width="16" height="20" rx="7" fill="#0469fa"/>
+  <rect x="174" y="148" width="16" height="20" rx="7" fill="#39b6ff" opacity=".7" filter="url(#bu1b2)"/>
+
+  <!-- mirror -->
+  <path d="M794 54c10-4 18 0 20 8 2 7-3 13-11 14-8 1-13-3-14-10z" fill="#0a1b33"/>
+  <path d="M786 62c6-4 12-4 16-2" stroke="#0a1b33" stroke-width="5" stroke-linecap="round" fill="none"/>
+
+  <!-- body highlights -->
+  <path d="M196 118h556" stroke="#ffffff" stroke-width="3" opacity=".45" stroke-linecap="round" fill="none"/>
+  <path d="M212 50h440" stroke="#ffffff" stroke-width="3" opacity=".55" stroke-linecap="round" fill="none"/>
+</svg>

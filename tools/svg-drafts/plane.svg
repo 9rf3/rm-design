@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 320" width="980" height="320">
+  <defs>
+    <linearGradient id="p1fus" x1="0" y1="110" x2="0" y2="198" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset=".34" stop-color="#fcfeff"/>
+      <stop offset=".72" stop-color="#e6eef9"/>
+      <stop offset="1" stop-color="#bdcfe7"/>
+    </linearGradient>
+    <linearGradient id="p1wing" x1="570" y1="180" x2="700" y2="266" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset=".5" stop-color="#eff5fc"/>
+      <stop offset="1" stop-color="#b3c7e1"/>
+    </linearGradient>
+    <linearGradient id="p1wingf" x1="580" y1="52" x2="740" y2="140" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f6fafe"/>
+      <stop offset="1" stop-color="#c1d4eb"/>
+    </linearGradient>
+    <linearGradient id="p1fin" x1="474" y1="30" x2="566" y2="150" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#4f9dff"/>
+      <stop offset=".45" stop-color="#0f74ee"/>
+      <stop offset="1" stop-color="#044bbf"/>
+    </linearGradient>
+    <linearGradient id="p1glass" x1="0" y1="124" x2="0" y2="154" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#17497f"/>
+      <stop offset="1" stop-color="#06162e"/>
+    </linearGradient>
+    <linearGradient id="p1eng" x1="656" y1="232" x2="734" y2="268" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#c9daf0"/>
+    </linearGradient>
+    <linearGradient id="p1trail" x1="40" y1="0" x2="476" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#37d4ff" stop-opacity="0"/>
+      <stop offset=".42" stop-color="#37d4ff" stop-opacity=".4"/>
+      <stop offset=".8" stop-color="#6ce8ff" stop-opacity=".88"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity=".95"/>
+    </linearGradient>
+    <radialGradient id="p1glow" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#7ef0ff" stop-opacity=".8"/>
+      <stop offset=".5" stop-color="#2aa6ff" stop-opacity=".3"/>
+      <stop offset="1" stop-color="#2aa6ff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="p1b1" x="-70%" y="-300%" width="240%" height="700%">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+    <filter id="p1b2" x="-70%" y="-500%" width="240%" height="1100%">
+      <feGaussianBlur stdDeviation="2.6"/>
+    </filter>
+    <filter id="p1b3" x="-70%" y="-400%" width="240%" height="900%">
+      <feGaussianBlur stdDeviation="12"/>
+    </filter>
+  </defs>
+
+  <g transform="translate(0,6)">
+    <!-- motion trail -->
+    <g>
+      <ellipse cx="430" cy="154" rx="168" ry="44" fill="url(#p1glow)" filter="url(#p1b3)"/>
+      <rect x="44" y="148" width="432" height="12" rx="6" fill="url(#p1trail)" filter="url(#p1b1)" opacity=".9"/>
+      <rect x="150" y="126" width="300" height="5" rx="2.5" fill="url(#p1trail)" filter="url(#p1b2)" opacity=".6"/>
+      <rect x="104" y="178" width="356" height="5" rx="2.5" fill="url(#p1trail)" filter="url(#p1b2)" opacity=".5"/>
+      <rect x="318" y="152" width="160" height="4" rx="2" fill="#e8fcff" filter="url(#p1b2)" opacity=".9"/>
+    </g>
+
+    <!-- far horizontal stabiliser -->
+    <path d="M506 142c-20-16-46-32-64-41-9-5-17-1-13 7 6 12 30 31 52 42 7 3 16 1 25-8z" fill="url(#p1wingf)"/>
+    <!-- far wing -->
+    <path d="M784 132c-64-30-142-64-196-84-13-5-24 1-19 11 7 15 60 46 124 74 26 11 62 13 86 4 5-2 8-4 5-5z" fill="url(#p1wingf)"/>
+    <!-- vertical stabiliser -->
+    <path d="M566 128 520 34q-7-11-16-4l-11 9q-8 7-4 16l-23 99z" fill="url(#p1fin)"/>
+    <path d="M558 130 518 42" stroke="#a8dcff" stroke-width="3.5" stroke-linecap="round" opacity=".6" fill="none"/>
+
+    <!-- fuselage -->
+    <path d="M942 154c-4-18-36-30-70-34-74-9-174-11-254-6-60 4-114 16-152 33-7 3-9 8-5 12 15 12 46 24 86 31 62 10 140 12 210 10 60-2 114-6 142-14 26-7 41-17 43-32z" fill="url(#p1fus)"/>
+    <path d="M544 124c102-11 224-11 324-3" stroke="#ffffff" stroke-width="4" stroke-linecap="round" opacity=".6" fill="none"/>
+    <path d="M562 188c82 10 206 11 304 2" stroke="#5fe0ff" stroke-width="3.5" stroke-linecap="round" opacity=".55" filter="url(#p1b2)" fill="none"/>
+
+    <!-- cabin windows -->
+    <g fill="url(#p1glass)">
+      <circle cx="548" cy="140" r="4.2"/><circle cx="571" cy="139" r="4.2"/>
+      <circle cx="594" cy="138" r="4.2"/><circle cx="617" cy="137" r="4.2"/>
+      <circle cx="640" cy="136" r="4.2"/><circle cx="663" cy="135" r="4.2"/>
+      <circle cx="686" cy="135" r="4.2"/><circle cx="709" cy="134" r="4.2"/>
+      <circle cx="732" cy="134" r="4.2"/><circle cx="755" cy="135" r="4.2"/>
+      <circle cx="778" cy="135" r="4.2"/><circle cx="801" cy="136" r="4.2"/>
+      <circle cx="824" cy="137" r="4.2"/><circle cx="847" cy="139" r="4.2"/>
+      <circle cx="870" cy="142" r="4.2"/>
+    </g>
+    <!-- cockpit glass -->
+    <path d="M880 124c22-3 44 3 56 14 4 4 3 9-2 11-17 6-39 5-51 0-8-4-9-20-3-25z" fill="url(#p1glass)"/>
+    <path d="M886 131c18-1 35 3 45 10" stroke="#8feaff" stroke-width="2.4" stroke-linecap="round" opacity=".6" fill="none"/>
+
+    <!-- near horizontal stabiliser -->
+    <path d="M508 160c-20 15-46 30-63 39-8 4-15-1-11-8 7-12 33-30 54-40 7-3 16-3 20 9z" fill="url(#p1wing)"/>
+    <!-- pylon (behind wing) -->
+    <path d="M688 200h32l6 42h-44z" fill="#d3e1f2"/>
+    <!-- near wing -->
+    <path d="M792 172c-66 38-152 74-204 92-13 5-24 0-20-10 6-14 54-44 114-72 26-12 66-20 100-14 6 1 10-3 10-6z" fill="url(#p1wing)"/>
+    <path d="M774 184c-56 34-124 68-170 88" stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity=".5" fill="none"/>
+    <path d="M700 214c-38 24-84 50-114 64" stroke="#8fb6e6" stroke-width="2" stroke-linecap="round" opacity=".5" fill="none"/>
+    <!-- wingtip light -->
+    <circle cx="576" cy="264" r="5" fill="#9ff4ff"/>
+    <circle cx="576" cy="264" r="14" fill="#5fe6ff" opacity=".6" filter="url(#p1b2)"/>
+
+    <!-- engine -->
+    <rect x="656" y="232" width="80" height="38" rx="19" fill="url(#p1eng)"/>
+    <path d="M720 234c11 2 16 8 16 17s-5 15-16 17z" fill="#0a1f3c"/>
+    <path d="M724 237c8 2 12 7 12 14s-4 12-12 14" stroke="#5fe0ff" stroke-width="3" fill="none" opacity=".85"/>
+    <ellipse cx="664" cy="251" rx="7" ry="15" fill="#0a1f3c" opacity=".35"/>
+  </g>
+</svg>
