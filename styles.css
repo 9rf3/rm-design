@@ -145,22 +145,35 @@ input {
     0 0 0 1px rgba(4, 105, 250, 0.06);
 }
 
-/* Logo placeholder ------------------------------------------- */
+/* Logo --------------------------------------------------------- */
 
 .brand {
   flex: none;
   display: inline-flex;
   align-items: center;
+  gap: 11px;
 }
 
-.brand__slot {
+.brand__mark {
   display: block;
-  width: 198px;
+  flex: none;
   height: 46px;
-  border-radius: 14px;
-  border: 1.5px dashed rgba(4, 105, 250, 0.38);
-  background: linear-gradient(180deg, #f7faff, #e9f2ff);
-  box-shadow: inset 0 1px 0 #fff;
+  width: auto;
+}
+
+.brand__word {
+  display: block;
+  font-size: 27px;
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 1;
+  text-transform: lowercase;
+  color: #0a1a3d;
+  white-space: nowrap;
+}
+
+.brand__tld {
+  color: var(--brand);
 }
 
 /* Links -------------------------------------------------------- */
@@ -2274,9 +2287,16 @@ input {
     gap: 20px;
   }
 
-  .brand__slot {
-    width: 170px;
-    height: 42px;
+  .brand {
+    gap: 9px;
+  }
+
+  .brand__mark {
+    height: 40px;
+  }
+
+  .brand__word {
+    font-size: 24px;
   }
 }
 
@@ -2301,10 +2321,17 @@ input {
     gap: 10px;
   }
 
-  .brand__slot {
-    width: 134px;
-    height: 36px;
-    border-radius: 12px;
+  .brand {
+    gap: 7px;
+  }
+
+  .brand__mark {
+    height: 32px;
+  }
+
+  .brand__word {
+    font-size: 19px;
+    letter-spacing: -0.03em;
   }
 
   .header-actions {
