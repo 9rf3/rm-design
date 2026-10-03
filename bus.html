@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Автобус — ticketsale.uz — Билеты на автобус по Узбекистану</title>
+    <meta
+      name="description"
+      content="Поиск и бронирование мест в междугороднем автобусе: маршруты, выбор мест, оплата и электронный билет с QR-кодом."
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%231E6FF1'/%3E%3Cpath d='M11 8h3.4l2.1 6 2.1-6H22l-3.6 9.4c-.9 2.3-2.7 3.6-5.4 3.6v-2.6c1.5 0 2.4-.6 2.9-1.9L11 8Z' fill='white'/%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="fonts.css" />
+    <link rel="stylesheet" href="vendor/phosphor/regular.css" />
+    <link rel="stylesheet" href="vendor/phosphor/fill.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="bus.css" />
+  </head>
+
+  <body>
+    <!-- ============================================ Header -->
+    <header class="site-header" id="siteHeader">
+      <div class="container header-inner">
+        <div class="nav-shell">
+          <div class="nav-pill">
+            <a class="brand" href="index.html" aria-label="ticketsale.uz — на главную">
+              <img class="brand__mark" src="img/logo-plane.png" alt="" width="272" height="240" />
+              <span class="brand__word">ticketsale<span class="brand__tld">.uz</span></span>
+            </a>
+
+            <nav class="nav-menu" aria-label="Главное меню">
+              <a class="nav-link" href="index.html">Главная</a>
+              <a class="nav-link" href="index.html#directions">Билеты</a>
+              <a class="nav-link is-active" href="bus.html" aria-current="page">Автобус</a>
+              <a class="nav-link" href="index.html#transport">Услуги</a>
+              <a class="nav-link" href="index.html#footer">Поддержка</a>
+            </nav>
+
+            <div class="header-actions">
+              <button class="icon-btn" id="headerSearch" aria-label="Поиск билетов">
+                <i class="ph ph-magnifying-glass" aria-hidden="true"></i>
+              </button>
+              <a class="link-btn" href="#"><i class="ph ph-user" aria-hidden="true"></i>Войти</a>
+              <a class="btn btn--primary btn--reg" href="#">
+                Регистрация<i class="ph ph-arrow-right" aria-hidden="true"></i>
+              </a>
+              <button class="burger" id="burger" aria-label="Меню" aria-expanded="false" aria-controls="drawer">
+                <i class="ph ph-list" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="drawer" id="drawer">
+        <a href="index.html"><i class="ph ph-house" aria-hidden="true"></i>Главная</a>
+        <a href="index.html#directions"><i class="ph ph-ticket" aria-hidden="true"></i>Билеты</a>
+        <a href="bus.html"><i class="ph ph-bus" aria-hidden="true"></i>Автобус</a>
+        <a href="index.html#transport"><i class="ph ph-briefcase" aria-hidden="true"></i>Услуги</a>
+        <a href="index.html#footer"><i class="ph ph-headset" aria-hidden="true"></i>Поддержка</a>
+        <div class="drawer-actions">
+          <a class="btn btn--ghost" href="#">Войти</a>
+          <a class="btn btn--primary" href="#">Регистрация</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- ========================================== Page head -->
+      <section class="bus-hero">
+        <div class="container">
+          <nav class="crumbs" aria-label="Хлебные крошки">
+            <a href="index.html">Главная</a>
+            <i class="ph ph-caret-right" aria-hidden="true"></i>
+            <span>Автобус</span>
+          </nav>
+
+          <div class="bus-hero__row">
+            <div class="bus-hero__copy">
+              <span class="eyebrow">
+                <i class="ph ph-bus" aria-hidden="true"></i>
+                Междугородние рейсы по Узбекистану
+              </span>
+              <h1>Билеты на <span class="accent">автобус</span></h1>
+              <p class="bus-hero__sub">Маршрут, места, оплата — и QR-билет уже у вас в кармане</p>
+            </div>
+
+            <ul class="bus-hero__facts">
+              <li><b>120+</b><span>направлений</span></li>
+              <li><b>51</b><span>место в автобусе</span></li>
+              <li><b>24/7</b><span>поддержка</span></li>
+            </ul>
+          </div>
+
+          <ol class="steps" id="steps">
+            <li class="step is-active" data-step="1">
+              <span class="step__n"><i class="ph ph-magnifying-glass" aria-hidden="true"></i></span>
+              <span class="step__t">Поиск рейса</span>
+            </li>
+            <li class="step" data-step="2">
+              <span class="step__n"><i class="ph ph-seat" aria-hidden="true"></i></span>
+              <span class="step__t">Выбор мест</span>
+            </li>
+            <li class="step" data-step="3">
+              <span class="step__n"><i class="ph ph-identification-card" aria-hidden="true"></i></span>
+              <span class="step__t">Данные пассажиров</span>
+            </li>
+            <li class="step" data-step="4">
+              <span class="step__n"><i class="ph ph-credit-card" aria-hidden="true"></i></span>
+              <span class="step__t">Оплата</span>
+            </li>
+            <li class="step" data-step="5">
+              <span class="step__n"><i class="ph ph-qr-code" aria-hidden="true"></i></span>
+              <span class="step__t">Билет</span>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ========================================== Flow -->
+      <section class="bus-flow">
+        <div class="container">
+          <!-- ------------------------------------- STEP 1 : search -->
+          <div class="step-panel is-active" data-panel="1">
+            <form class="search-card bus-search" id="busSearch" novalidate>
+              <div class="search-tabs" role="tablist" aria-label="Вид транспорта">
+                <a class="search-tab" href="index.html" role="tab" aria-selected="false">
+                  <i class="ph ph-train" aria-hidden="true"></i>Поезд
+                </a>
+                <a class="search-tab is-active" href="bus.html" role="tab" aria-selected="true">
+                  <i class="ph ph-bus" aria-hidden="true"></i>Автобус
+                </a>
+                <a class="search-tab" href="index.html" role="tab" aria-selected="false">
+                  <i class="ph ph-airplane" aria-hidden="true"></i>Самолёт
+                </a>
+              </div>
+
+              <div class="search-fields">
+                <div class="field field--from field--place" data-place="from">
+                  <i class="ph ph-map-pin" aria-hidden="true"></i>
+                  <span class="field__body">
+                    <span class="field__label">Откуда — точка отправления</span>
+                    <input
+                      type="text"
+                      id="fromPlace"
+                      value="Ташкент, Автовокзал «Салют»"
+                      autocomplete="off"
+                      aria-label="Откуда"
+                      aria-expanded="false"
+                      aria-haspopup="listbox"
+                    />
+                  </span>
+                  <div class="place-menu" id="fromMenu" role="listbox" aria-label="Точки отправления"></div>
+                </div>
+
+                <button class="swap-btn" type="button" id="swapBtn" aria-label="Поменять местами">
+                  <i class="ph ph-arrows-left-right" aria-hidden="true"></i>
+                </button>
+
+                <div class="field field--to field--place" data-place="to">
+                  <i class="ph ph-map-pin" aria-hidden="true"></i>
+                  <span class="field__body">
+                    <span class="field__label">Куда — точка прибытия</span>
+                    <input
+                      type="text"
+                      id="toPlace"
+                      value="Самарканд, Автовокзал рег. №2"
+                      autocomplete="off"
+                      aria-label="Куда"
+                      aria-expanded="false"
+                      aria-haspopup="listbox"
+                    />
+                  </span>
+                  <div class="place-menu" id="toMenu" role="listbox" aria-label="Точки прибытия"></div>
+                </div>
+
+                <div class="field field--date" id="dateOutField">
+                  <i class="ph ph-calendar-blank" aria-hidden="true"></i>
+                  <span class="field__body">
+                    <span class="field__label">Дата — туда</span>
+                    <span class="field__value" id="dateOutValue">12 окт. 2026</span>
+                  </span>
+                  <input type="date" id="dateOutInput" value="2026-10-12" aria-label="Дата поездки туда" />
+                </div>
+
+                <div class="field field--date" id="dateBackField">
+                  <i class="ph ph-calendar-blank" aria-hidden="true"></i>
+                  <span class="field__body">
+                    <span class="field__label">Дата — обратно</span>
+                    <span class="field__value" id="dateBackValue">15 окт. 2026</span>
+                  </span>
+                  <input type="date" id="dateBackInput" value="2026-10-15" aria-label="Дата поездки обратно" />
+                </div>
+
+                <div
+                  class="field field--group"
+                  id="groupField"
+                  tabindex="0"
+                  role="button"
+                  aria-expanded="false"
+                  aria-haspopup="dialog"
+                >
+                  <i class="ph ph-users" aria-hidden="true"></i>
+                  <span class="field__body">
+                    <span class="field__label">Поездка</span>
+                    <span class="field__value" id="groupValue">Индивидуально · 1</span>
+                  </span>
+                  <i class="ph ph-caret-down" aria-hidden="true"></i>
+
+                  <div class="popover" id="groupPopover" role="dialog" aria-label="Группа или индивидуально">
+                    <div class="seg" id="groupSeg">
+                      <button class="seg__btn is-active" type="button" data-mode="solo">Индивидуально</button>
+                      <button class="seg__btn" type="button" data-mode="group">Группа</button>
+                    </div>
+                    <div class="popover__row popover__row--pax">
+                      <div>
+                        <div class="popover__title" id="paxTitle">Пассажиров</div>
+                        <div class="popover__hint" id="paxHint">Один путешественник</div>
+                      </div>
+                      <div class="stepper">
+                        <button type="button" id="paxMinus" aria-label="Меньше пассажиров">
+                          <i class="ph ph-minus" aria-hidden="true"></i>
+                        </button>
+                        <span class="stepper__value" id="paxCount">1</span>
+                        <button type="button" id="paxPlus" aria-label="Больше пассажиров">
+                          <i class="ph ph-plus" aria-hidden="true"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <button class="popover__done" type="button" id="groupDone">Готово</button>
+                  </div>
+                </div>
+
+                <button class="btn btn--primary search-submit" type="submit" id="busSearchBtn">
+                  <i class="ph ph-magnifying-glass" aria-hidden="true"></i>
+                  <span>Найти рейсы</span>
+                </button>
+              </div>
+            </form>
+
+            <!-- Results -->
+            <div class="results" id="results" hidden>
+              <div class="results__head">
+                <div>
+                  <h3 class="results__title">Ташкент <i class="ph ph-arrow-right" aria-hidden="true"></i> Самарканд</h3>
+                  <p class="results__meta" id="resultsMeta">12 окт. 2026 · 1 пассажир · найдено 4 рейса</p>
+                </div>
+                <div class="sorts" role="tablist" aria-label="Сортировка">
+                  <span class="sorts__label">Сортировка:</span>
+                  <button class="sort-chip is-active" type="button">По времени</button>
+                  <button class="sort-chip" type="button">По цене</button>
+                  <button class="sort-chip" type="button">По длительности</button>
+                </div>
+              </div>
+
+              <div class="trip-list">
+                <article
+                  class="trip"
+                  data-from="Ташкент" data-to="Самарканд"
+                  data-term-from="Ташкент, Автовокзал «Салют»"
+                  data-term-to="Самарканд, Автовокзал рег. №2"
+                  data-date="12 окт. 2026"
+                  data-dep="06:40" data-arr="11:20" data-dur="4 ч 40 мин"
+                  data-bus="Рейс UZ-1042 · Isuzu LT" data-class="Премиум"
+                  data-price="95000" data-free="12"
+                >
+                  <div class="trip__route">
+                    <div class="trip__end">
+                      <b>06:40</b>
+                      <span>Ташкент, Автовокзал «Салют»<br /><em>ул. Бунёдкор, 1А</em></span>
+                    </div>
+                    <div class="trip__mid">
+                      <span class="trip__dur"><i class="ph ph-clock" aria-hidden="true"></i>4 ч 40 мин</span>
+                      <span class="trip__line" aria-hidden="true"><i class="ph ph-bus"></i></span>
+                      <span class="trip__note">Прямой рейс</span>
+                    </div>
+                    <div class="trip__end trip__end--right">
+                      <b>11:20</b>
+                      <span>Самарканд, Автовокзал рег. №2<br /><em>ул. Фаргона, 64</em></span>
+                    </div>
+                  </div>
+                  <div class="trip__meta">
+                    <div class="trip__chips">
+                      <span class="tag tag--brand"><i class="ph ph-crown" aria-hidden="true"></i>Премиум</span>
+                      <span class="tag"><i class="ph ph-bus" aria-hidden="true"></i>Isuzu LT</span>
+                      <span class="tag"><i class="ph ph-wifi-high" aria-hidden="true"></i>Wi-Fi</span>
+                      <span class="tag"><i class="ph ph-snowflake" aria-hidden="true"></i>Кондиционер</span>
+                      <span class="tag tag--free"><i class="ph ph-armchair" aria-hidden="true"></i>12 мест свободно</span>
+                    </div>
+                    <div class="trip__buy">
+                      <div class="trip__price"><b>95 000</b> UZS<span>за место</span></div>
+                      <button class="btn btn--primary trip__pick" type="button">
+                        Выбрать места<i class="ph ph-arrow-right" aria-hidden="true"></i>
+                      </button>
+                    </div>
+                  </div>
+                </article>
+
+                <article
+                  class="trip"
+                  data-from="Ташкент" data-to="Самарканд"
+                  data-term-from="Ташкент, Южный автовокзал"
+                  data-term-to="Самарканд, Автовокзал рег. №2"
+                  data-date="12 окт. 2026"
+                  data-dep="07:30" data-arr="12:10" data-dur="4 ч 40 мин"
+                  data-bus="Рейс UZ-1058 · Yutong ZK6" data-class="Комфорт"
+                  data-price="85000" data-free="18"
+                >
+                  <div class="trip__route">
+                    <div class="trip__end">
+                      <b>07:30</b>
+                      <span>Ташкент, Южный автовокзал<br /><em>ул. Ангарская, 67</em></span>
+                    </div>
+                    <div class="trip__mid">
+                      <span class="trip__dur"><i class="ph ph-clock" aria-hidden="true"></i>4 ч 40 мин</span>
+                      <span class="trip__line" aria-hidden="true"><i class="ph ph-bus"></i></span>
+                      <span class="trip__note">Прямой рейс</span>
+                    </div>
+                    <div class="trip__end trip__end--right">
+                      <b>12:10</b>
+                      <span>Самарканд, Автовокзал рег. №2<br /><em>ул. Фаргона, 64</em></span>
+                    </div>
+                  </div>
+                  <div class="trip__meta">
+                    <div class="trip__chips">
+                      <span class="tag"><i class="ph ph-armchair" aria-hidden="true"></i>Комфорт</span>
+                      <span class="tag"><i class="ph ph-bus" aria-hidden="true"></i>Yutong ZK6</span>
+                      <span class="tag"><i class="ph ph-wifi-high" aria-hidden="true"></i>Wi-Fi</span>
+                      <span class="tag"><i class="ph ph-plug" aria-hidden="true"></i>Розетки</span>
+                      <span class="tag tag--free"><i class="ph ph-armchair" aria-hidden="true"></i>18 мест свободно</span>
+                    </div>
+                    <div class="trip__buy">
+                      <div class="trip__price"><b>85 000</b> UZS<span>за место</span></div>
+                      <button class="btn btn--primary trip__pick" type="button">
+                        Выбрать места<i class="ph ph-arrow-right" aria-hidden="true"></i>
+                      </button>
+                    </div>
+                  </div>
+                </article>
+
+                <article
+                  class="trip"
+                  data-from="Ташкент" data-to="Самарканд"
+                  data-term-from="Ташкент, Автостанция «Ойбек»"
+                  data-term-to="Самарканд, Автостанция «Университет»"
+                  data-date="12 окт. 2026"
+                  data-dep="09:00" data-arr="14:05" data-dur="5 ч 05 мин"
+                  data-bus="Рейс UZ-1071 · Mercedes Sprinter" data-class="Комфорт"
+                  data-price="75000" data-free="24"
+                >
+                  <div class="trip__route">
+                    <div class="trip__end">
+                      <b>09:00</b>
+                      <span>Ташкент, Автостанция «Ойбек»<br /><em>ул. Шота Руставели, 12</em></span>
+                    </div>
+                    <div class="trip__mid">
+                      <span class="trip__dur"><i class="ph ph-clock" aria-hidden="true"></i>5 ч 05 мин</span>
+                      <span class="trip__line" aria-hidden="true"><i class="ph ph-bus"></i></span>
+                      <span class="trip__note">С остановкой в Пскенте</span>
+                    </div>
+                    <div class="trip__end trip__end--right">
+                      <b>14:05</b>
+                      <span>Самарканд, Автостанция «Университет»<br /><em>мкр. Университет, 12</em></span>
+                    </div>
+                  </div>
+                  <div class="trip__meta">
+                    <div class="trip__chips">
+                      <span class="tag"><i class="ph ph-armchair" aria-hidden="true"></i>Комфорт</span>
+                      <span class="tag"><i class="ph ph-bus" aria-hidden="true"></i>Mercedes Sprinter</span>
+                      <span class="tag"><i class="ph ph-snowflake" aria-hidden="true"></i>Кондиционер</span>
+                      <span class="tag tag--free"><i class="ph ph-armchair" aria-hidden="true"></i>24 места свободно</span>
+                    </div>
+                    <div class="trip__buy">
+                      <div class="trip__price"><b>75 000</b> UZS<span>за место</span></div>
+                      <button class="btn btn--primary trip__pick" type="button">
+                        Выбрать места<i class="ph ph-arrow-right" aria-hidden="true"></i>
+                      </button>
+                    </div>
+                  </div>
+                </article>
+
+                <article
+                  class="trip"
+                  data-from="Ташкент" data-to="Самарканд"
+                  data-term-from="Ташкент, Северный автовокзал"
+                  data-term-to="Самарканд, Ж/д вокзал"
+                  data-date="12 окт. 2026"
+                  data-dep="14:20" data-arr="18:50" data-dur="4 ч 30 мин"
+                  data-bus="Рейс UZ-1093 · Setra S415" data-class="Люкс"
+                  data-price="110000" data-free="9"
+                >
+                  <div class="trip__route">
+                    <div class="trip__end">
+                      <b>14:20</b>
+                      <span>Ташкент, Северный автовокзал<br /><em>ул. Боткинская, 208</em></span>
+                    </div>
+                    <div class="trip__mid">
+                      <span class="trip__dur"><i class="ph ph-clock" aria-hidden="true"></i>4 ч 30 мин</span>
+                      <span class="trip__line" aria-hidden="true"><i class="ph ph-bus"></i></span>
+                      <span class="trip__note">Прямой рейс</span>
+                    </div>
+                    <div class="trip__end trip__end--right">
+                      <b>18:50</b>
+                      <span>Самарканд, Ж/д вокзал<br /><em>ул. Регистан, 47</em></span>
+                    </div>
+                  </div>
+                  <div class="trip__meta">
+                    <div class="trip__chips">
+                      <span class="tag tag--brand"><i class="ph ph-crown" aria-hidden="true"></i>Люкс</span>
+                      <span class="tag"><i class="ph ph-bus" aria-hidden="true"></i>Setra S415</span>
+                      <span class="tag"><i class="ph ph-wifi-high" aria-hidden="true"></i>Wi-Fi</span>
+                      <span class="tag"><i class="ph ph-toilet" aria-hidden="true"></i>Туалет</span>
+                      <span class="tag tag--free"><i class="ph ph-armchair" aria-hidden="true"></i>9 мест свободно</span>
+                    </div>
+                    <div class="trip__buy">
+                      <div class="trip__price"><b>110 000</b> UZS<span>за место</span></div>
+                      <button class="btn btn--primary trip__pick" type="button">
+                        Выбрать места<i class="ph ph-arrow-right" aria-hidden="true"></i>
+                      </button>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+
+          <!-- ------------------------------------- STEP 2 : seats -->
+          <div class="step-panel" data-panel="2">
+            <div class="panel trip-bar">
+              <div class="trip-bar__route">
+                <b id="s2Route">Ташкент <i class="ph ph-arrow-right"></i> Самарканд</b>
+                <span id="s2Terminals">Ташкент, Автовокзал «Салют» → Самарканд, Автовокзал рег. №2</span>
+              </div>
+              <ul class="trip-bar__facts">
+                <li><i class="ph ph-calendar-blank" aria-hidden="true"></i><span id="s2Date">12 окт. 2026</span></li>
+                <li><i class="ph ph-clock" aria-hidden="true"></i><span id="s2Times">06:40 — 11:20</span></li>
+                <li><i class="ph ph-bus" aria-hidden="true"></i><span id="s2Bus">Рейс UZ-1042 · Isuzu LT</span></li>
+                <li><i class="ph ph-crown" aria-hidden="true"></i><span id="s2Class">Премиум</span></li>
+              </ul>
+              <button class="link-btn trip-bar__edit" type="button" data-goto="1">
+                <i class="ph ph-arrow-left" aria-hidden="true"></i>Изменить поиск
+              </button>
+            </div>
+
+            <div class="panel seatmap-card">
+              <div class="legend">
+                <span class="legend__chip"><i class="dot dot--free"></i>Свободно <b id="cntFree">45</b></span>
+                <span class="legend__chip"><i class="dot dot--man"></i>Занято (муж.) <b id="cntMan">6</b></span>
+                <span class="legend__chip"><i class="dot dot--woman"></i>Занято (жен.) <b id="cntWoman">0</b></span>
+                <span class="legend__chip legend__chip--sel"><i class="dot dot--sel"></i>Выбрано <b id="cntSel">0</b></span>
+              </div>
+
+              <div class="seatmap-scroll">
+                <div class="seatmap">
+                  <div class="seat-cols" id="seatCols"></div>
+                  <div class="driver" title="Водитель">
+                    <i class="ph ph-steering-wheel" aria-hidden="true"></i>
+                    <span>Водитель</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="seatmap-foot">
+                <div class="seat-note">
+                  <i class="ph ph-info" aria-hidden="true"></i>
+                  Выберите <b id="needSel">1</b> место(-а). Нажмите на свободное место, чтобы взять его.
+                </div>
+                <div class="seat-actions">
+                  <span class="seat-picked" id="seatPicked">Места не выбраны</span>
+                  <button class="btn btn--ghost" type="button" data-goto="1">Назад</button>
+                  <button class="btn btn--primary" type="button" id="toPassengers">
+                    Далее — данные пассажиров<i class="ph ph-arrow-right" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ------------------------------------- STEP 3 : passengers -->
+          <div class="step-panel" data-panel="3">
+            <div class="split">
+              <div class="split__main">
+                <div class="panel">
+                  <h3 class="panel__title">Данные пассажиров</h3>
+                  <p class="panel__sub">
+                    Укажите данные точно так, как они записаны в документе — по ним проводник проверит билет.
+                  </p>
+                  <div class="pax-list" id="paxList"></div>
+                </div>
+              </div>
+
+              <aside class="split__side">
+                <div class="panel summary" id="sideSummary">
+                  <h4 class="summary__title">Ваша поездка</h4>
+                  <div class="summary__route">
+                    <b id="s3Route">Ташкент → Самарканд</b>
+                    <span id="s3Terminals">Автовокзал «Салют» → Автовокзал рег. №2</span>
+                  </div>
+                  <ul class="summary__facts">
+                    <li><span>Дата</span><b id="s3Date">12 окт. 2026</b></li>
+                    <li><span>Отправление</span><b id="s3Dep">06:40</b></li>
+                    <li><span>Прибытие</span><b id="s3Arr">11:20</b></li>
+                    <li><span>Автобус</span><b id="s3Bus">UZ-1042 · Премиум</b></li>
+                  </ul>
+                  <div class="summary__seats">
+                    <span class="summary__label">Места</span>
+                    <div class="seat-tags" id="s3Seats"></div>
+                  </div>
+                  <div class="summary__price">
+                    <div class="summary__line"><span id="s3PriceLabel">1 место × 95 000 UZS</span><b id="s3Price">95 000</b></div>
+                    <div class="summary__total"><span>Итого</span><b id="s3Total">95 000 UZS</b></div>
+                  </div>
+                  <div class="summary__actions">
+                    <button class="btn btn--ghost" type="button" data-goto="2">
+                      <i class="ph ph-arrow-left" aria-hidden="true"></i>Места
+                    </button>
+                    <button class="btn btn--primary" type="button" id="toPayment">
+                      Далее — оплата<i class="ph ph-arrow-right" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                </div>
+              </aside>
+            </div>
+          </div>
+
+          <!-- ------------------------------------- STEP 4 : payment -->
+          <div class="step-panel" data-panel="4">
+            <div class="split">
+              <div class="split__main">
+                <div class="panel">
+                  <h3 class="panel__title">Способ оплаты</h3>
+                  <p class="panel__sub">Оплата одной транзакцией — сумма за всех пассажиров группы.</p>
+
+                  <div class="pay-methods" id="payMethods">
+                    <label class="pay-method is-active">
+                      <input type="radio" name="pay" value="card" checked />
+                      <i class="ph ph-credit-card" aria-hidden="true"></i>
+                      <span><b>Банковская карта</b><em>Uzcard, Humo, Visa</em></span>
+                      <i class="ph ph-check-circle pay-method__check" aria-hidden="true"></i>
+                    </label>
+                    <label class="pay-method">
+                      <input type="radio" name="pay" value="payme" />
+                      <i class="ph ph-wallet" aria-hidden="true"></i>
+                      <span><b>Payme</b><em>Оплата в приложении</em></span>
+                      <i class="ph ph-check-circle pay-method__check" aria-hidden="true"></i>
+                    </label>
+                    <label class="pay-method">
+                      <input type="radio" name="pay" value="click" />
+                      <i class="ph ph-money-wavy" aria-hidden="true"></i>
+                      <span><b>Click</b><em>Оплата в приложении</em></span>
+                      <i class="ph ph-check-circle pay-method__check" aria-hidden="true"></i>
+                    </label>
+                  </div>
+
+                  <div class="pay-card" id="payCard">
+                    <div class="pay-card__head">
+                      <span>Данные карты</span>
+                      <span class="pay-card__brand"><i class="ph ph-shield-check" aria-hidden="true"></i>Защищённое соединение</span>
+                    </div>
+                    <label class="inp">
+                      <span>Номер карты</span>
+                      <input type="text" id="cardNumber" value="8600 1234 5678 9012" inputmode="numeric" />
+                    </label>
+                    <div class="pay-card__row">
+                      <label class="inp">
+                        <span>Срок действия</span>
+                        <input type="text" id="cardExp" value="09/29" inputmode="numeric" />
+                      </label>
+                      <label class="inp">
+                        <span>CVC</span>
+                        <input type="text" id="cardCvc" value="•••" inputmode="numeric" />
+                      </label>
+                      <label class="inp inp--wide">
+                        <span>Имя владельца</span>
+                        <input type="text" id="cardName" value="ALIYEV JASUR" />
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="pay-app" id="payApp" hidden>
+                    <i class="ph ph-phone" aria-hidden="true"></i>
+                    <div>
+                      <b>Оплата в приложении</b>
+                      <span>После нажатия «Оплатить» откроется приложение для подтверждения платежа.</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <aside class="split__side">
+                <div class="panel summary">
+                  <h4 class="summary__title">Заказ</h4>
+                  <div class="summary__route">
+                    <b id="s4Route">Ташкент → Самарканд</b>
+                    <span id="s4Date">12 окт. 2026 · 06:40</span>
+                  </div>
+                  <ul class="order-lines" id="orderLines"></ul>
+                  <div class="summary__price">
+                    <div class="summary__line"><span>Сервисный сбор</span><b>0</b></div>
+                    <div class="summary__total"><span>К оплате</span><b id="s4Total">95 000 UZS</b></div>
+                  </div>
+                  <div class="summary__actions summary__actions--stack">
+                    <button class="btn btn--primary" type="button" id="payBtn">
+                      <i class="ph ph-lock-key" aria-hidden="true"></i><span id="payBtnLabel">Оплатить 95 000 UZS</span>
+                    </button>
+                    <button class="btn btn--ghost" type="button" data-goto="3">
+                      <i class="ph ph-arrow-left" aria-hidden="true"></i>Данные пассажиров
+                    </button>
+                  </div>
+                  <p class="summary__secure">
+                    <i class="ph ph-shield-check" aria-hidden="true"></i>
+                    Платёж защищён. Деньги списываются один раз — за все места в заказе.
+                  </p>
+                </div>
+              </aside>
+            </div>
+          </div>
+
+          <!-- ------------------------------------- STEP 5 : ticket -->
+          <div class="step-panel" data-panel="5">
+            <div class="ok-banner">
+              <span class="ok-banner__icon"><i class="ph ph-fill ph-check-circle" aria-hidden="true"></i></span>
+              <div class="ok-banner__text">
+                <b>Оплата прошла успешно</b>
+                <span>Билеты с QR-кодами отправлены на почту и сохранены в вашем кабинете</span>
+              </div>
+              <span class="ok-banner__sum" id="okSum">190 000 UZS</span>
+            </div>
+
+            <div class="tickets" id="tickets"></div>
+
+            <div class="ticket-actions">
+              <button class="btn btn--primary" type="button" id="dlAll">
+                <i class="ph ph-download-simple" aria-hidden="true"></i>Скачать все билеты
+              </button>
+              <button class="btn btn--ghost" type="button" id="printAll">
+                <i class="ph ph-printer" aria-hidden="true"></i>Распечатать
+              </button>
+              <a class="btn btn--ghost" href="index.html">
+                <i class="ph ph-house" aria-hidden="true"></i>На главную
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============================================ Footer -->
+    <footer class="site-footer" id="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <a class="logo" href="index.html">ticketsale.uz</a>
+          </div>
+
+          <div class="footer-col">
+            <h4>О нас</h4>
+            <p class="footer-about">
+              ticketsale.uz — это удобный сервис для покупки билетов на поезд,
+              автобус и самолёт по всему Узбекистану. Мы делаем путешествия
+              доступнее, проще и комфортнее для каждого.
+            </p>
+          </div>
+
+          <div class="footer-col">
+            <h4>Быстрые ссылки</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Главная</a></li>
+              <li><a href="index.html#directions">Билеты</a></li>
+              <li><a href="bus.html">Автобус</a></li>
+              <li><a href="index.html#transport">Услуги</a></li>
+              <li><a href="index.html#footer">Поддержка</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Контакты</h4>
+            <ul class="footer-contacts">
+              <li><i class="ph ph-phone" aria-hidden="true"></i>+998 71 123 45 67</li>
+              <li><i class="ph ph-envelope" aria-hidden="true"></i>support@ticketsale.uz</li>
+              <li><i class="ph ph-map-pin" aria-hidden="true"></i>Ташкент, Узбекистан</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <span>© 2026 ticketsale.uz. Все права защищены.</span>
+          <div class="socials">
+            <a href="#" aria-label="Telegram"><img src="img/icon-telegram.svg" alt="" /></a>
+            <a href="#" aria-label="Instagram"><img src="img/icon-instagram.svg" alt="" /></a>
+            <a href="#" aria-label="YouTube"><img src="img/icon-youtube.svg" alt="" /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="bus.js"></script>
+  </body>
+</html>
