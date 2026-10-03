@@ -300,7 +300,7 @@
   function renderPax() {
     paxCountEl.textContent = String(state.pax);
     if (state.mode === "solo") {
-      groupValueEl.textContent = "Индивидуально · 1";
+      groupValueEl.textContent = "Индивидуально";
       $("#paxHint").textContent = "Один путешественник";
       paxMinus.disabled = true;
       paxPlus.disabled = true;
@@ -362,7 +362,7 @@
   });
 
   /* ---------------------------------------------------- steps */
-  var scrollTarget = $(".bus-flow");
+  var scrollTarget = $("#steps");
 
   function goToStep(n) {
     $$(".step-panel").forEach(function (p) {
@@ -374,9 +374,12 @@
       s.classList.toggle("is-done", i < n);
     });
     if (n > state.maxStep) state.maxStep = n;
-    scrollTarget.scrollIntoView({
-      behavior: reduceMotion ? "auto" : "smooth",
-      block: "start"
+    var offset = (header ? header.offsetHeight : 0) + 10;
+    var top =
+      scrollTarget.getBoundingClientRect().top + window.scrollY - offset;
+    window.scrollTo({
+      top: Math.max(0, top),
+      behavior: reduceMotion ? "auto" : "smooth"
     });
   }
 
@@ -622,6 +625,12 @@
         });
       });
     });
+
+    $$("input", paxList).forEach(function (inp) {
+      inp.addEventListener("input", function () {
+        inp.classList.remove("is-invalid");
+      });
+    });
   }
 
   function paxData(i) {
@@ -683,6 +692,21 @@
 
   /* ---------------------------------------------------- payment */
   $("#toPayment").addEventListener("click", function () {
+    var inputs = $$("#paxList input");
+    var bad = inputs.filter(function (inp) { return !inp.value.trim(); });
+    inputs.forEach(function (inp) {
+      inp.classList.toggle("is-invalid", !inp.value.trim());
+    });
+    if (bad.length) {
+      bad[0].focus();
+      bad[0].scrollIntoView({
+        behavior: reduceMotion ? "auto" : "smooth",
+        block: "center"
+      });
+      toast("Заполните данные всех пассажиров");
+      return;
+    }
+
     var t = state.trip.dataset;
     $("#s4Route").textContent = t.from + " → " + t.to;
     $("#s4Date").textContent = t.date + " · " + t.dep;

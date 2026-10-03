@@ -3,6 +3,10 @@
    depends on tokens/components from styles.css
    ============================================================ */
 
+[hidden] {
+  display: none !important;
+}
+
 /* ------------------------------------------------------------
    Page hero
    ------------------------------------------------------------ */
@@ -235,21 +239,26 @@
   margin-bottom: 24px;
 }
 
+.bus-search .field {
+  gap: 14px;
+}
+
 .bus-search .field--from,
 .bus-search .field--to {
-  width: 275px;
+  width: 236px;
 }
 
 .bus-search .field--date {
-  width: 152px;
+  width: 156px;
 }
 
 .bus-search .field--group {
-  width: 196px;
+  width: 210px;
 }
 
 .bus-search .search-submit {
-  width: 178px;
+  width: 168px;
+  flex: none;
 }
 
 .bus-search .swap-btn {
@@ -262,9 +271,17 @@
 }
 
 .field--place input {
-  font-size: 15px !important;
+  font-size: 14.5px !important;
   letter-spacing: -0.005em !important;
   text-overflow: ellipsis;
+}
+
+.bus-search .field--date .field__value {
+  font-size: 15.5px;
+}
+
+.bus-search .field--group .field__value {
+  font-size: 15px;
 }
 
 .field--group {
@@ -1045,7 +1062,7 @@
   font-weight: 800;
 }
 
-.pax-card__who span {
+.pax-card__who div span {
   display: block;
   font-size: 12.5px;
   color: var(--ink-3);
@@ -1109,6 +1126,12 @@
 .inp input::placeholder {
   color: var(--ink-4);
   font-weight: 500;
+}
+
+.inp input.is-invalid {
+  border-color: #e5484d;
+  background: #fff6f6;
+  box-shadow: 0 0 0 3px rgba(229, 72, 77, 0.12);
 }
 
 .gender {
@@ -1826,6 +1849,21 @@
 /* ------------------------------------------------------------
    Responsive
    ------------------------------------------------------------ */
+
+@media (max-width: 1330px) {
+  .bus-search .field--from,
+  .bus-search .field--to,
+  .bus-search .field--date,
+  .bus-search .field--group {
+    flex: 1 1 170px;
+    width: auto;
+  }
+
+  .bus-search .search-submit {
+    flex: 0 1 168px;
+    width: auto;
+  }
+}
 
 @media (max-width: 1180px) {
   .bus-search .field--from,
